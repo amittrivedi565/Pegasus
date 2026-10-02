@@ -955,57 +955,22 @@ body.theme-dark {
 
 .lx-product__stage {
   position: relative;
-  display: grid;
-  place-items: center;
   aspect-ratio: 5 / 4;
   overflow: hidden;
   border: 1px solid var(--lx-line);
   border-radius: 4px;
-  background:
-    radial-gradient(ellipse at 50% 62%, rgba(139, 92, 246, 0.45), transparent 58%),
-    radial-gradient(ellipse at 50% 100%, rgba(226, 79, 201, 0.18), transparent 60%),
-    #070708;
-}
-
-/* violet floor-light under each device */
-.lx-product__stage::after {
-  content: "";
-  position: absolute;
-  left: 22%;
-  right: 22%;
-  bottom: 14%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #b18cff, transparent);
-  box-shadow: 0 0 24px 6px rgba(139, 92, 246, 0.55);
+  background: #070708;
 }
 
 .lx-product__stage img {
-  position: relative;
-  z-index: 1;
-  max-width: 70%;
-  max-height: 72%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 1.2s var(--lx-ease);
-  /* feather the render's edges so it melts into the stage */
-  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
-  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
-}
-
-.lx-product--node .lx-product__stage img {
-  max-height: 78%;
-}
-
-.lx-product--curtain .lx-product__stage img {
-  max-width: 92%;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent), linear-gradient(#000 80%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent), linear-gradient(#000 80%, transparent);
-  mask-composite: intersect;
 }
 
 .lx-product:hover .lx-product__stage img {
-  transform: translateY(-8px);
+  transform: scale(1.04);
 }
 
 .lx-product__text {

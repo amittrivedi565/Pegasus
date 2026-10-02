@@ -15,9 +15,9 @@ def icon(paths, cls=""):
 ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>'
 
 PILLARS = [
-  ("I", "Invisible", "Sensors and controls disappear into the architecture. Guests feel the comfort, never the technology."),
-  ("II", "Intuitive", "One touch, one word or nothing at all: every room responds to the people in it."),
-  ("III", "Intelligent", "Every space learns, saves energy and alerts your team before small issues become complaints."),
+  ("I", "Invisible", "Sensors and controls disappear into the architecture. People feel the comfort, never the technology."),
+  ("II", "Intuitive", "One touch, one word or nothing at all: every room, floor and building responds to the people in it."),
+  ("III", "Intelligent", "Every device, sensor and system learns, saves energy and alerts your team before small issues become problems."),
 ]
 
 MOMENTS = [
@@ -39,6 +39,17 @@ MOMENTS = [
    "Morning sunlight glowing through sheer curtains"),
 ]
 
+DOMAINS = [
+  ("Lighting", "Scenes, schedules and daylight-aware dimming in every space.", '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>'),
+  ("Climate &amp; HVAC", "Air conditioning, heating and ventilation that follow occupancy.", '<path d="M10 4a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 10v6"/>'),
+  ("Curtains &amp; blinds", "Motorised shading on schedules, scenes or a single tap.", '<path d="M3 4h18M5 4v16M19 4v16M5 20c2.5-4 2.5-12 0-16M19 20c-2.5-4-2.5-12 0-16M9 4v16M15 4v16"/>'),
+  ("Sensors", "Presence, air, water, smoke and more, feeding one system.", '<circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/>'),
+  ("IoT devices", "Any connected device on one network, monitored and controlled.", '<rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>'),
+  ("Access &amp; security", "Keyless entry, cameras and alarms, room by room.", '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4M12 15v2"/>'),
+  ("Energy &amp; metering", "Live consumption per room, floor and building.", '<path d="M13 3L5 13h6l-1 8 8-10h-6z"/>'),
+  ("Building systems", "Pumps, plant rooms, lifts and building management, connected.", '<path d="M4 21V5l8-3 8 3v16M4 21h16M9 21v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/>'),
+]
+
 SENSORS = [
   ("Presence", "Knows when a room is occupied, and when it isn't.", '<circle cx="12" cy="7" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2M3 9a9 9 0 0 1 2-4M21 9a9 9 0 0 0-2-4"/>'),
   ("Climate", "Temperature and humidity tuned to every guest.", '<path d="M10 4a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 10v6"/>'),
@@ -51,15 +62,15 @@ SENSORS = [
 ]
 
 SCALE = [
-  ("Suite", "Full room automation",
-   "Lighting, climate, curtains, media and access orchestrated around one guest, in one beautifully calm space."),
-  ("Property", "Every room, one view",
-   "Rooms, corridors, kitchens and plant rooms on one live dashboard, connected to Pegasus Opera and your property systems."),
+  ("Room", "Full room automation",
+   "Lighting, climate, curtains, media, sensors and access orchestrated in one space: a suite, an apartment, a home or an office."),
+  ("Building", "Every floor, one view",
+   "Rooms, lobbies, corridors, kitchens, parking and plant rooms on one live dashboard, connected to Pegasus Opera and your building systems."),
   ("Enterprise", "An entire skyline",
-   "Hotels, residences and towers across cities, with central monitoring, energy optimisation and round-the-clock support from Pegasus Argus."),
+   "Hotels, residences and commercial towers across cities, with central monitoring, energy optimisation and round-the-clock support from Pegasus Argus."),
 ]
 
-CONNECT = ["Pegasus Opera", "Property management", "Point of sale", "Building management", "Energy systems", "Pegasus Muse"]
+CONNECT = ["Pegasus Opera", "IoT devices", "Property management", "Point of sale", "Building management", "Energy systems", "Pegasus Muse"]
 
 # Scene controller values: scene -> (lights, climate, curtains, music, glow 0-1)
 SCENES = {
@@ -72,13 +83,13 @@ SCENES = {
 
 # ---------------------------------------------------------------- automation showcase
 STEPS = [
-  ("Detect motion", "Microwave sensors notice the moment someone enters.",
-   '<circle cx="14" cy="4.5" r="1.8"/><path d="M8 21l3-6 3 2v4M11 15l1-5 4 2 3-1M12 10L8 11l-2 4"/>'),
-  ("Automate lights", "Lighting responds instantly, and switches off when the room empties.",
-   '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>'),
-  ("Control curtains", "Curtains glide open with the sunrise or close with a single tap.",
-   '<path d="M3 4h18M5 4v16M19 4v16M5 20c2.5-4 2.5-12 0-16M19 20c-2.5-4-2.5-12 0-16M9 4v16M15 4v16"/>'),
-  ("Manage from your phone", "Every room, scene and schedule in one app, from anywhere.",
+  ("Sense", "Sensors read presence, climate, air, water, smoke and energy in every space.",
+   '<circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/>'),
+  ("Connect", "Lighting, HVAC, curtains, access, IoT devices and building systems join one platform.",
+   '<rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>'),
+  ("Automate", "Rules and scenes act instantly, from a single room to a whole building.",
+   '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>'),
+  ("Manage from anywhere", "Every room, device and schedule in one app and one live dashboard.",
    '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>'),
 ]
 
@@ -109,8 +120,8 @@ PRODUCTS = [
        alt="Morning sunlight through sheer curtains onto a bed"),
 ]
 
-APP_TILES = [("Living room", "Lights", True), ("Curtains", "Open", True), ("Bedroom", "Lights", False),
-             ("Lobby", "Lights", True), ("Washroom", "Auto sensor", True), ("Kitchen", "Lights", False)]
+APP_TILES = [("Living room", "Lights", True), ("Curtains", "Open", True), ("Climate", "AC &middot; 23°C", True),
+             ("Lobby", "Lights", True), ("Washroom", "Auto sensor", True), ("Water tank", "Pump auto", False)]
 APP_FEATS = [
   ("Control devices from anywhere", '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"/>'),
   ("Create schedules and scenes", '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/>'),
@@ -165,7 +176,7 @@ def showcase_top():
       <div class="container">
         <header class="lx-head lx-reveal">
           <p class="lx-eyebrow">How it works</p>
-          <h2 class="lx-title">A smarter stay<br>in <em>every moment.</em></h2>
+          <h2 class="lx-title">Every system,<br><em>working as one.</em></h2>
         </header>
         <div class="lx-how__track">
           <svg class="lx-wave" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
@@ -195,7 +206,7 @@ def showcase_top():
             <p class="lx-eyebrow">The collection</p>
             <h2 class="lx-title">Designed devices,<br><em>quietly brilliant.</em></h2>
           </div>
-          <p class="lx-head__text">Each Pegasus SmartHomes device is built to disappear into beautiful interiors and work flawlessly, day and night.</p>
+          <p class="lx-head__text">A few of our own devices, each built to disappear into beautiful interiors. Behind them, one platform runs every sensor, IoT device and building system you have.</p>
         </header>
         <!-- Each stage shows the device's automation flow over a real interior -->
 {chr(10).join(products)}
@@ -222,7 +233,7 @@ def app_section():
         <div class="lx-app__text lx-reveal">
           <p class="lx-eyebrow">Your property in your hands</p>
           <h2 class="lx-title">One app.<br><em>Complete control.</em></h2>
-          <p class="lx-control__body">Control lights, curtains and more from a single, easy-to-use mobile app, available on Android and iOS.</p>
+          <p class="lx-control__body">Control lights, climate, curtains, sensors and every connected device across your rooms and buildings from one easy-to-use mobile app, available on Android and iOS.</p>
           <ul class="lx-app__feats">
 {feats}
           </ul>
@@ -258,6 +269,12 @@ def build():
           </div>
         </article>''')
 
+    domains = "\n".join(f'''          <div class="lx-sensor lx-reveal">
+            {icon(p)}
+            <h3>{t}</h3>
+            <p>{d}</p>
+          </div>''' for t, d, p in DOMAINS)
+
     sensors = "\n".join(f'''          <div class="lx-sensor lx-reveal">
             {icon(p)}
             <h3>{t}</h3>
@@ -286,8 +303,8 @@ def build():
       <img class="lx-hero__bg" src="assets/images/smarthomes/hero.jpg" alt="" width="2000" height="1125">
       <div class="container lx-hero__inner">
         <img class="lx-hero__logo" src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
-        <h1 class="lx-hero__title">The art of the<br><em>intelligent stay.</em></h1>
-        <p class="lx-hero__text">Hospitality automation that anticipates every guest, from a single suite to an entire skyline.</p>
+        <h1 class="lx-hero__title">The art of the<br><em>intelligent building.</em></h1>
+        <p class="lx-hero__text">Automation for every sensor, IoT device and building system, across homes, hotels and entire properties, from a single room to an entire skyline.</p>
         <div class="lx-actions">
           <a href="{MAIL}" class="lx-btn lx-btn--solid">Arrange a private consultation</a>
           <a href="#the-experience" class="lx-btn">Discover the experience</a>
@@ -307,11 +324,27 @@ def build():
       </div>
     </section>
 
+    <!-- ===== What we automate ===== -->
+    <section class="lx-section lx-section--alt">
+      <div class="container">
+        <header class="lx-head lx-head--split lx-reveal">
+          <div>
+            <p class="lx-eyebrow">What we automate</p>
+            <h2 class="lx-title">Not just lights.<br><em>Everything.</em></h2>
+          </div>
+          <p class="lx-head__text">Homes, hotels, offices and entire buildings: if it can be sensed, switched or measured, Pegasus SmartHomes can automate it.</p>
+        </header>
+        <div class="lx-sensors">
+{domains}
+        </div>
+      </div>
+    </section>
+
 {showcase_top()}    <!-- ===== A day in the suite ===== -->
     <section class="lx-section">
       <div class="container">
         <header class="lx-head lx-reveal">
-          <p class="lx-eyebrow">A day in the suite</p>
+          <p class="lx-eyebrow">In hospitality: a day in the suite</p>
           <h2 class="lx-title">Choreographed from arrival<br>to <em>sunrise.</em></h2>
         </header>
         <!-- Photos (Unsplash): arrival @albert-stoynov, welcome @sung-jin-cho, evening @archee-lal, morning @fujiphilm -->
@@ -327,7 +360,7 @@ def build():
             <p class="lx-eyebrow">The sensors</p>
             <h2 class="lx-title">Every sensor,<br><em>beautifully hidden.</em></h2>
           </div>
-          <p class="lx-head__text">Discreet, wireless and designed for hospitality, each sensor quietly feeds one intelligent system that looks after your guests and your building.</p>
+          <p class="lx-head__text">Discreet, wireless and built for homes, hotels and commercial buildings, each sensor quietly feeds one intelligent system that looks after your guests and your building.</p>
         </header>
         <div class="lx-sensors">
 {sensors}
@@ -399,7 +432,7 @@ def build():
       <div class="container lx-close__inner lx-reveal">
         <p class="lx-eyebrow">Private consultation</p>
         <h2 class="lx-close__title">Let us design your<br><em>intelligent property.</em></h2>
-        <p class="lx-close__text">From a single signature suite to a portfolio of buildings, our SmartHomes team in Indore will survey, design and deliver it with you.</p>
+        <p class="lx-close__text">From a single room to a portfolio of hotels and buildings, our SmartHomes team in Indore will survey, design and deliver it with you.</p>
         <div class="lx-actions lx-actions--center">
           <a href="{MAIL}" class="lx-btn lx-btn--solid">Arrange a consultation</a>
           <a href="{SURVEY}" class="lx-btn">Book a site survey</a>
@@ -419,7 +452,7 @@ def main():
 
     head_nav = head_nav.replace("<title>Pegasus</title>", "<title>Pegasus SmartHomes</title>")
     head_nav = head_nav.replace('content="Pegasus — enterprise technology that connects everything."',
-                                'content="Pegasus SmartHomes: luxury hospitality automation, from full room automation to enterprise buildings."')
+                                'content="Pegasus SmartHomes: automation for sensors, IoT devices, buildings and hospitality, from a single room to enterprise properties."')
     head_nav = head_nav.replace('<meta name="theme-color" content="#000000">', '<meta name="theme-color" content="#0b0b0c">')
     fonts = ('  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
              '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'

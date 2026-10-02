@@ -47,3 +47,13 @@ Edit its content in `tools/smarthomes/gen_smarthomes.py`, then run from the site
 python3 tools/smarthomes/gen_smarthomes.py
 ```
 
+
+## Deploy (Cloudflare)
+
+`build.sh` copies the public site (HTML, `css/`, `js/`, `assets/`, `_headers`) into `dist/`; `docs/` and `tools/` are never published.
+
+- **From your machine:** `npx wrangler login` once, then `npx wrangler deploy` (runs the build via `wrangler.jsonc`).
+- **Cloudflare Workers, Git-connected:** build command `sh build.sh`, deploy command `npx wrangler deploy`.
+- **Cloudflare Pages, Git-connected:** framework preset *None*, build command `sh build.sh`, output directory `dist`.
+
+`_headers` sets basic security headers and a 7-day cache on `assets/`.
