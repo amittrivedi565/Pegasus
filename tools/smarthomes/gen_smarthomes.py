@@ -465,7 +465,7 @@ def main():
              '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">\n')
     head_nav = head_nav.replace('  <link rel="stylesheet" href="css/styles.css">\n',
                                 fonts + '  <link rel="stylesheet" href="css/styles.css">\n  <link rel="stylesheet" href="css/smarthomes.css">\n')
-    head_nav = head_nav.replace("<body>", '<body id="top" class="theme-dark">', 1)
+    head_nav = re.sub(r"<body[^>]*>", '<body id="top" class="theme-dark">', head_nav, count=1)
     # dark navbar: white logo
     head_nav = re.sub(r'<a href="index.html" class="navbar__logo" aria-label="Pegasus home">\s*<img[^>]*>',
                       f'<a href="{SUBDOMAIN}" class="navbar__logo navbar__logo--smarthomes" aria-label="Pegasus SmartHomes home">\n'
@@ -481,6 +481,7 @@ def main():
     page = re.sub(r'href="(construction|hospitality)\.html', rf'href="{SITE}\1', page)
     page = page.replace("<title>Pegasus SmartHomes</title>", f'<title>Pegasus SmartHomes</title>\n  <link rel="canonical" href="{SUBDOMAIN}">', 1)
     assert 'navbar__logo--smarthomes' in page and 'logo-white.png' in page, "logo swap failed"
+    assert '<body id="top" class="theme-dark">' in page, "dark theme class missing"
     open("smarthomes.html", "w").write(page)
     print("written smarthomes.html", len(page))
 
