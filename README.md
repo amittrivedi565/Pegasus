@@ -17,7 +17,8 @@ Marketing website for **Pegasus**, an enterprise technology company. Built with 
 │   └── assets/             # Logos, photos, favicons
 ├── tools/                  # Page generators (not deployed)
 ├── docs/                   # Design references (not deployed)
-└── wrangler.jsonc          # Cloudflare config: serves public/
+├── src/worker.js           # Routes smarthomes.mypegasus.in to the SmartHomes page
+└── wrangler.jsonc          # Cloudflare config: serves public/ + the worker
 ```
 
 ## Run locally
@@ -50,13 +51,17 @@ Edit its content in `tools/smarthomes/gen_smarthomes.py`, then run:
 python3 tools/smarthomes/gen_smarthomes.py
 ```
 
+## SmartHomes subdomain
+
+The SmartHomes page lives at **https://smarthomes.mypegasus.in/**. `src/worker.js` serves it at the subdomain root and
+301-redirects `mypegasus.in/smarthomes` there. Links from the SmartHomes page to other pages point at `https://mypegasus.in/`
+(handled in `gen_smarthomes.py`). The subdomain is attached as a custom domain on the Worker in the Cloudflare dashboard.
+
 ## Deploy (Cloudflare)
 
 Only the `public/` folder is published; `docs/` and `tools/` never are. There is no build step.
 
-- **Cloudflare Workers, Git-connected (recommended):** connect the repo; Cloudflare reads `wrangler.jsonc` and runs `npx wrangler deploy`. Leave the build command empty.
-- **Cloudflare Pages, Git-connected:** framework preset *None*, build command empty, build output directory `public`.
-- **Pages direct upload (drag and drop):** upload the `public` folder, not the whole project.
+- **Cloudflare Workers, Git-connected (current setup):** connect the repo; Cloudflare reads `wrangler.jsonc` and runs `npx wrangler deploy`. Leave the build command empty.
 - **From your machine:** `npx wrangler login` once, then `npx wrangler deploy`.
 
 `public/_headers` sets basic security headers and a 7-day cache on `assets/`.

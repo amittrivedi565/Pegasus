@@ -5,6 +5,8 @@ Usage: python3 tools/smarthomes/gen_smarthomes.py   (reads/writes pages in publi
 import os
 import re
 
+SITE = "https://mypegasus.in/"                 # main site
+SUBDOMAIN = "https://smarthomes.mypegasus.in/"  # this page is served at the subdomain root
 PUBLIC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "public")  # the deployed site
 
 MAIL = "mailto:connect@mypegasus.in?subject=Pegasus%20SmartHomes%20consultation"
@@ -466,7 +468,7 @@ def main():
     head_nav = head_nav.replace("<body>", '<body id="top" class="theme-dark">', 1)
     # dark navbar: white logo
     head_nav = re.sub(r'<a href="index.html" class="navbar__logo" aria-label="Pegasus home">\s*<img[^>]*>',
-                      '<a href="smarthomes.html" class="navbar__logo navbar__logo--smarthomes" aria-label="Pegasus SmartHomes home">\n'
+                      f'<a href="{SUBDOMAIN}" class="navbar__logo navbar__logo--smarthomes" aria-label="Pegasus SmartHomes home">\n'
                       '        <img src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">',
                       head_nav)
     tail = re.sub(r'(class="footer__logo"[^>]*>\s*<img src="assets/images/)logo\.png', r'\1logo-white.png', tail)
@@ -474,6 +476,10 @@ def main():
 
     page = head_nav + build() + "\n" + tail
     page = page.replace('href="#section-', 'href="index.html#section-')
+    # served from the subdomain, so links to other pages must point at the main site
+    page = re.sub(r'href="index\.html', f'href="{SITE}', page)
+    page = re.sub(r'href="(construction|hospitality)\.html', rf'href="{SITE}\1', page)
+    page = page.replace("<title>Pegasus SmartHomes</title>", f'<title>Pegasus SmartHomes</title>\n  <link rel="canonical" href="{SUBDOMAIN}">', 1)
     assert 'navbar__logo--smarthomes' in page and 'logo-white.png' in page, "logo swap failed"
     open("smarthomes.html", "w").write(page)
     print("written smarthomes.html", len(page))

@@ -184,7 +184,7 @@ SMARTHOMES_SECTION = f"""    <!-- ===== Pegasus SmartHomes (hospitality automati
 {chr(10).join(f'              <li>{sh_icon(CHECK)}<div><strong>{t}</strong><span>{d}</span></div></li>' for t, d in SH_FEATURES)}
             </ul>
             <div class="ind-actions">
-              <a href="smarthomes.html" class="btn btn--light">Discover Pegasus SmartHomes</a>
+              <a href="https://smarthomes.mypegasus.in/" class="btn btn--light">Discover Pegasus SmartHomes</a>
               <a href="{SH_MAIL}" class="btn btn--outline-light">Talk to us about SmartHomes</a>
             </div>
           </div>
