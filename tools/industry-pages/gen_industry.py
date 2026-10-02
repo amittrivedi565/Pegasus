@@ -1,7 +1,8 @@
 """Generate industry pages (construction.html, hospitality.html) from one template.
-Usage: python3 gen_industry.py [construction|hospitality|all]   (run from the site root)"""
+Usage: python3 gen_industry.py [construction|hospitality|all]   (pages are read from and written to public/)"""
 import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+PUBLIC = os.path.join(HERE, "..", "..", "public")  # the deployed site
 sys.path.insert(0, HERE)
 from industry_helpers import CHEV, TABIDX, NL14, NL18, la, ICON, visual
 
@@ -293,6 +294,7 @@ def build(cfg):
     open(cfg["file"], "w").write(page)
     print("written", cfg["file"], len(page))
 
+os.chdir(PUBLIC)
 which = sys.argv[1] if len(sys.argv) > 1 else "all"
 for name, cfg in PAGES.items():
     if which in ("all", name):

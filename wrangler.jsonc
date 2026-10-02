@@ -1,13 +1,10 @@
-// Cloudflare Workers static-assets config. `sh build.sh` copies the public site into dist/.
-// Deploy: npx wrangler deploy   (runs the build automatically)
+// Cloudflare Workers static-assets config. The site in public/ is served as-is (no build step).
+// Deploy: npx wrangler deploy
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pegasus-website",
   "compatibility_date": "2026-10-01",
-  "build": {
-    "command": "sh build.sh"
-  },
   "assets": {
-    "directory": "./dist"
+    "directory": "./public"
   }
 }

@@ -1,8 +1,11 @@
 """Generate smarthomes.html (dark luxury page for Pegasus SmartHomes).
 Navbar and footer are copied from index.html and switched to their dark variants.
-Usage (from the site root): python3 tools/smarthomes/gen_smarthomes.py"""
+Usage: python3 tools/smarthomes/gen_smarthomes.py   (reads/writes pages in public/)"""
 
+import os
 import re
+
+PUBLIC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "public")  # the deployed site
 
 MAIL = "mailto:connect@mypegasus.in?subject=Pegasus%20SmartHomes%20consultation"
 SURVEY = "mailto:connect@mypegasus.in?subject=Pegasus%20SmartHomes%20site%20survey"
@@ -446,6 +449,7 @@ def build():
 '''
 
 def main():
+    os.chdir(PUBLIC)
     idx = open("index.html").read()
     head_nav = idx[:idx.index("  <main>")]
     tail = idx[idx.index("  <!-- ===== Footer"):]
