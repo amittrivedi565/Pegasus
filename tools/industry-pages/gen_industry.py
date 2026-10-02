@@ -51,14 +51,9 @@ CONSTRUCTION = dict(
      ("portal", "Client portals", "Share progress, documents and invoices with clients in one secure place.", ("Learn more", "#"), "demo")]),
    ("data", "Data insights", [
      ("dash", "Project dashboards", "Monitor cost, schedule and safety KPIs across your whole portfolio in real time.", ("Learn more", "#"), "demo"),
-     ("spark", "AI cost forecasting", "Predict overruns before they happen with Pegasus Delphi AI models.", ("Explore Pegasus Delphi", "index.html#section-two"), None),
-     ("db", "Unified construction data", "Bring ERP, site and BIM data together in Pegasus Gaia Data Cloud.", ("Explore Pegasus Gaia", "index.html#section-two"), None),
+     ("spark", "AI cost forecasting", "Predict overruns before they happen with AI forecasting built into Pegasus Atlas.", ("Explore Pegasus Delphi", "index.html#section-two"), None),
+     ("db", "Unified construction data", "Bring ERP, site and BIM data together in one place for reporting and analysis.", ("Explore Pegasus Gaia", "index.html#section-two"), None),
      ("shield", "Risk and compliance analytics", "Spot safety, quality and contract risks early, and act on them.", ("Learn more", "#"), None)]),
-   ("innovation", "Digital innovation", [
-     ("bot", "AI agents on site", "Ask Pegasus Muse for progress updates, approvals or reports in plain language.", ("Meet Pegasus Muse", "index.html#section-five"), None),
-     ("plug", "Connected systems", "Integrate scheduling, BIM and accounting tools with Pegasus Iris Integration.", ("Explore Pegasus Iris", "index.html#section-two"), None),
-     ("code", "Custom apps and workflows", "Build site apps and approval flows without code in Pegasus Daedalus Studio.", ("Explore Pegasus Daedalus", "index.html#section-two"), None),
-     ("scale", "Responsible AI", "Govern every agent with approvals and audit trails in Pegasus Themis.", ("Explore Pegasus Themis", "index.html#section-two"), None)]),
   ],
   UC_TITLE="Explore how we can help your construction business run better",
   UC_SUB="Our construction solutions help you run resilient, sustainable supply chains, optimise operations and meet client expectations.",
@@ -73,15 +68,9 @@ CONSTRUCTION = dict(
   WHY_TITLE="Why construction teams choose Pegasus",
   whys=[("db", "One source of truth", "Estimating, projects, procurement and finance share one data model, so everyone works from the same numbers."),
         ("helmet", "Built for the field", "Mobile-first tools let site teams log progress, hours and materials from any device, right where the work happens."),
-        ("pin", "Local expertise", "Our Indore-based team implements and supports Pegasus Atlas through Pegasus Odyssey and Argus services.")],
+        ("pin", "Local expertise", "Our Indore-based team implements and supports Pegasus Atlas, from go-live to day-to-day support.")],
   SPECIALIST_BTN="Talk to a construction specialist",
   DEMO_TEXT="Book a 30-minute walkthrough with our construction specialists and see how Atlas fits your projects.",
-  resources=[
-   ("doc", "Guide", "Digital transformation for construction firms", "Learn practical strategies to modernise estimating, project controls and finance, and drive efficiency across your organisation.", ("Read the guide", "#")),
-   ("bot", "Article", "Harnessing AI for construction management", "See how AI agents help construction teams save time, reduce costs and improve safety.", ("Read the article", "#")),
-   ("play", "Demo", "AI on the job site with Pegasus Muse", "Explore how AI supports better planning, safety, efficiency and cost control for informed decision-making.", ("Watch the demo", "index.html#section-five")),
-   ("dash", "White paper", "Maximising project visibility", "Learn how connecting field operations with back-office systems gives you a live view of every project.", ("Read the white paper", "#"))],
-  NEXT_ROADMAP_TEXT="Explore what's coming next in our construction product portfolio.",
   SUBNAV_EXTRA="", SMARTHOMES="",
 )
 
@@ -124,14 +113,9 @@ HOSPITALITY = dict(
      ("heart", "Loyalty and personalisation", "Reward returning guests and tailor offers using what you already know about them.", ("Learn more", "#"), "demo")]),
    ("data", "Data insights", [
      ("dash", "Portfolio dashboards", "Monitor occupancy, average daily rate, labour and food costs across your portfolio in real time.", ("Learn more", "#"), "demo"),
-     ("spark", "AI demand forecasting", "Forecast occupancy and demand with Pegasus Delphi AI models to plan staffing and purchasing.", ("Explore Pegasus Delphi", "index.html#section-two"), None),
-     ("db", "Unified guest and operations data", "Bring property, point-of-sale and ERP data together in Pegasus Gaia Data Cloud.", ("Explore Pegasus Gaia", "index.html#section-two"), None),
+     ("spark", "AI demand forecasting", "Forecast occupancy and demand with AI built into Pegasus Opera to plan staffing and purchasing.", ("Explore Pegasus Delphi", "index.html#section-two"), None),
+     ("db", "Unified guest and operations data", "Bring property, point-of-sale and ERP data together in one place for reporting and analysis.", ("Explore Pegasus Gaia", "index.html#section-two"), None),
      ("shield", "Risk and compliance analytics", "Spot food safety, audit and contract risks early, and act on them.", ("Learn more", "#"), None)]),
-   ("innovation", "Digital innovation", [
-     ("bot", "AI agents for every team", "Ask Pegasus Muse for occupancy updates, approvals or reports in plain language.", ("Meet Pegasus Muse", "index.html#section-five"), None),
-     ("plug", "Connected systems", "Integrate property management, point of sale, channel managers and accounting with Pegasus Iris Integration.", ("Explore Pegasus Iris", "index.html#section-two"), None),
-     ("code", "Custom apps and workflows", "Build housekeeping, maintenance and approval apps without code in Pegasus Daedalus Studio.", ("Explore Pegasus Daedalus", "index.html#section-two"), None),
-     ("scale", "Responsible AI", "Govern every agent with approvals and audit trails in Pegasus Themis.", ("Explore Pegasus Themis", "index.html#section-two"), None)]),
   ],
   UC_TITLE="Explore how we can help your hospitality business run better",
   UC_SUB="Our hospitality solutions help you control costs, empower your teams and deliver experiences guests remember.",
@@ -146,15 +130,9 @@ HOSPITALITY = dict(
   WHY_TITLE="Why hospitality teams choose Pegasus",
   whys=[("db", "One source of truth", "Finance, purchasing, people and guest operations share one data model across every property."),
         ("bed", "Built for every shift", "Mobile-first tools let front desk, kitchen and housekeeping teams work from any device, wherever they are."),
-        ("pin", "Local expertise", "Our Indore-based team implements and supports Pegasus Opera through Pegasus Odyssey and Argus services.")],
+        ("pin", "Local expertise", "Our Indore-based team implements and supports Pegasus Opera, from go-live to day-to-day support.")],
   SPECIALIST_BTN="Talk to a hospitality specialist",
   DEMO_TEXT="Book a 30-minute walkthrough with our hospitality specialists and see how Opera fits your properties.",
-  resources=[
-   ("doc", "Guide", "Digital transformation for hotels and restaurants", "Learn practical strategies to modernise finance, purchasing and operations across your properties.", ("Read the guide", "#")),
-   ("bot", "Article", "Harnessing AI in hospitality", "See how AI agents help hospitality teams save time, reduce costs and personalise every stay.", ("Read the article", "#")),
-   ("play", "Demo", "AI at the front desk with Pegasus Muse", "Explore how AI supports better forecasting, staffing and guest service.", ("Watch the demo", "index.html#section-five")),
-   ("dash", "White paper", "Maximising portfolio visibility", "Learn how connecting property systems with back-office finance gives you a live view of every property.", ("Read the white paper", "#"))],
-  NEXT_ROADMAP_TEXT="Explore what's coming next in our hospitality product portfolio.",
 )
 
 
@@ -220,6 +198,15 @@ HOSPITALITY["SMARTHOMES"] = SMARTHOMES_SECTION
 PAGES = {"construction": CONSTRUCTION, "hospitality": HOSPITALITY}
 
 # ---------------------------------------------------------------- build
+# hrefs that lead nowhere: placeholders and removed home page sections
+DEAD = ("#", "index.html#section-two", "index.html#section-three", "index.html#section-five")
+
+def live(links):
+    return [l for l in links if l and (isinstance(l, str) or l[1] not in DEAD)]
+
+def links_div(links, indent):
+    return f'\n{indent}<div class="ind-links">\n{indent}  ' + f"\n{indent}  ".join(links) + f'\n{indent}</div>' if links else ""
+
 def build(cfg):
     product = cfg["PRODUCT"]
     DEMO = mail(f"Pegasus {product} demo request")
@@ -236,14 +223,11 @@ def build(cfg):
         tabs_btn.append(f'          <button class="ind-tab" role="tab" id="tab-{key}" aria-controls="panel-{key}" aria-selected="{aria}"{tabi}>{label}</button>')
         cards_html = []
         for icon, title, text, l1, l2 in cards:
-            links = la(*l1) + ((NL18 + L(l2)) if l2 else "")
+            links = links_div([L(l) for l in live([l1, l2])], "              ")
             cards_html.append(f'''            <article class="ind-card">
               {visual(icon)}
               <h3 class="ind-card__title">{title}</h3>
-              <p class="ind-card__text">{text}</p>
-              <div class="ind-links">
-                  {links}
-              </div>
+              <p class="ind-card__text">{text}</p>{links}
             </article>''')
         panels.append(f'''        <div class="ind-panel" role="tabpanel" id="panel-{key}" aria-labelledby="tab-{key}"{hid}>
 {chr(10).join(cards_html)}
@@ -251,10 +235,7 @@ def build(cfg):
 
     uc_html = "\n".join(f'''          <div class="ind-usecase">
             <h3>{t}</h3>
-            <p>{d}</p>
-            <div class="ind-links">
-              {NL14.join(L(l) for l in links)}
-            </div>
+            <p>{d}</p>{links_div([L(l) for l in live(links)], "            ")}
           </div>''' for t, d, links in cfg["usecases"])
 
     why_html = "\n".join(f'''          <div class="ind-why">
@@ -263,23 +244,13 @@ def build(cfg):
             <p>{d}</p>
           </div>''' for i, t, d in cfg["whys"])
 
-    res_html = "\n".join(f'''          <article class="ind-card">
-            {visual(i, chip)}
-            <h3 class="ind-card__title">{t}</h3>
-            <p class="ind-card__text">{d}</p>
-            <div class="ind-links">
-              {la(*l)}
-            </div>
-          </article>''' for i, chip, t, d, l in cfg["resources"])
 
     bullets = "\n".join(f"              <li>{b}</li>" for b in cfg["bullets"])
 
     tpl = open(os.path.join(HERE, "industry_main.tpl")).read()
     fields = {k: v for k, v in cfg.items() if k.isupper()}
     main = tpl.format(DEMO=DEMO, CONTACT=CONTACT, TABS="\n".join(tabs_btn), PANELS="\n\n".join(panels),
-                      USECASES=uc_html, WHYS=why_html, RESOURCES=res_html, BULLETS=bullets,
-                      LA_ROADMAP=la(f"View the Pegasus {product} road map"), LA_OVERVIEW=la("Download the product overview"),
-                      LA_PRODUCT_ROADMAP=la("View the product road map"), LA_JOURNEY=la("Plan your journey", "index.html#section-three"),
+                      USECASES=uc_html, WHYS=why_html, BULLETS=bullets,
                       **fields)
 
     idx = open("index.html").read()

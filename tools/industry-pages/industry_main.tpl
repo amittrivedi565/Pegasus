@@ -10,7 +10,6 @@
         <li><a href="#products">Products</a></li>
 {SUBNAV_EXTRA}        <li><a href="#use-cases">Use cases</a></li>
         <li><a href="#why-pegasus">Why Pegasus</a></li>
-        <li><a href="#resources">Resources</a></li>
         <li><a href="#get-started">Get started</a></li>
       </ul>
     </div>
@@ -50,10 +49,6 @@
             <ul class="ind-bullets">
 {BULLETS}
             </ul>
-            <div class="ind-links">
-              {LA_ROADMAP}
-              {LA_OVERVIEW}
-            </div>
           </div>
         </div>
       </div>
@@ -77,14 +72,6 @@
           <a href="{CONTACT}" class="btn btn--primary">Contact us to get started</a>
           <a href="index.html#section-one" class="btn btn--outline">Explore more industries</a>
         </div>
-
-        <aside class="ind-banner">
-          <div>
-            <h2 class="ind-banner__title">Discover the Pegasus AI Platform</h2>
-            <p>See how Pegasus ERP, Pegasus AI and Pegasus Gaia Data Cloud come together to deliver exceptional value for your business.</p>
-          </div>
-          <a href="index.html#section-two" class="btn btn--primary">Learn more</a>
-        </aside>
       </div>
     </section>
 
@@ -125,36 +112,13 @@
       </div>
     </section>
 
-    <!-- ===== Resources ===== -->
-    <section id="resources" class="section">
-      <div class="container">
-        <header class="section-head">
-          <h2 class="section-title">Resources</h2>
-        </header>
-        <div class="ind-grid-2">
-{RESOURCES}
-        </div>
-      </div>
-    </section>
-
     <!-- ===== Take the next step ===== -->
     <section id="get-started" class="section">
       <div class="container">
         <header class="section-head">
           <h2 class="section-title">Take the next step</h2>
+          <p class="section-subtitle">Talk to our team about your business and see how Pegasus {PRODUCT} fits.</p>
         </header>
-        <div class="ind-grid-2 ind-next">
-          <div>
-            <h3 class="ind-card__title">Road map for Pegasus {PRODUCT}</h3>
-            <p class="ind-card__text">{NEXT_ROADMAP_TEXT}</p>
-            <div class="ind-links">{LA_PRODUCT_ROADMAP}</div>
-          </div>
-          <div>
-            <h3 class="ind-card__title">Implementation with Pegasus Odyssey</h3>
-            <p class="ind-card__text">Plan a smooth move to Pegasus {PRODUCT} with our proven, phased methodology.</p>
-            <div class="ind-links">{LA_JOURNEY}</div>
-          </div>
-        </div>
         <div class="ind-actions ind-actions--section">
           <a href="{CONTACT}" class="btn btn--primary">Contact us to get started</a>
           <a href="index.html#section-one" class="btn btn--outline">Explore more industries</a>

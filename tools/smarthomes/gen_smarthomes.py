@@ -36,7 +36,7 @@ MOMENTS = [
    "Hotel suite with a warm lamp and a city view through tall windows"),
   ("evening", "03", "22:30", "Evening", "Evening, in a single word",
    "Say “relax” and the lights dim, the curtains close and the air cools slightly. Do not disturb reaches housekeeping instantly, with no sign on the door.",
-   ["Voice scenes with Pegasus Muse", "Lights, curtains and climate in harmony", "Do not disturb shared with staff instantly"],
+   ["Voice scenes with Siri and Google Assistant", "Lights, curtains and climate in harmony", "Do not disturb shared with staff instantly"],
    "Bedroom bathed in warm evening light"),
   ("morning", "04", "06:50", "Morning", "Sunrise, on schedule",
    "Curtains open gently with the alarm, the lights rise to daylight and the bathroom is warm and ready, so every guest wakes naturally and on time.",
@@ -72,10 +72,10 @@ SCALE = [
   ("Building", "Every floor, one view",
    "Rooms, lobbies, corridors, kitchens, parking and plant rooms on one live dashboard, connected to Pegasus Opera and your building systems."),
   ("Enterprise", "An entire skyline",
-   "Hotels, residences and commercial towers across cities, with central monitoring, energy optimisation and round-the-clock support from Pegasus Argus."),
+   "Hotels, residences and commercial towers across cities, with central monitoring, energy optimisation and round-the-clock support from our team."),
 ]
 
-CONNECT = ["Pegasus Opera", "IoT devices", "Property management", "Point of sale", "Building management", "Energy systems", "Pegasus Muse"]
+CONNECT = ["Pegasus Opera", "IoT devices", "Property management", "Point of sale", "Building management", "Energy systems", "Voice assistants"]
 
 # Scene controller values: scene -> (lights, climate, curtains, music, glow 0-1)
 SCENES = {
@@ -394,8 +394,8 @@ def build():
         <div class="lx-control__text lx-reveal">
           <p class="lx-eyebrow">Guest control</p>
           <h2 class="lx-title">Your suite,<br><em>in your hand.</em></h2>
-          <p class="lx-control__body">Guests set the mood from the in-room panel, their phone or simply their voice with Pegasus Muse. Your team sees every room, live, from one elegant dashboard.</p>
-          <ul class="lx-specs lx-specs--inline"><li>In-room panel</li><li>Guest app</li><li>Voice with Pegasus Muse</li><li>Staff dashboard</li></ul>
+          <p class="lx-control__body">Guests set the mood from the in-room panel, their phone or simply their voice. Your team sees every room, live, from one elegant dashboard.</p>
+          <ul class="lx-specs lx-specs--inline"><li>In-room panel</li><li>Guest app</li><li>Voice control</li><li>Staff dashboard</li></ul>
           <p class="lx-hint">Try a scene on the panel.</p>
         </div>
 

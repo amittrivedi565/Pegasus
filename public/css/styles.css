@@ -2692,7 +2692,7 @@ main > .section {
 .footer__inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 2fr) repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
   gap: 48px 24px;
 }
 

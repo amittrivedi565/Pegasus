@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initStories();
-  initMuseDemo();
   initTabs();
   initSubnav();
   initLuxury();
@@ -113,64 +112,6 @@ function initStories() {
         media[i]?.classList.toggle("is-active", active);
       });
     });
-  });
-}
-
-// Pegasus Muse demo: reveal each [data-step] in sequence, hold, then loop.
-// Starts when scrolled into view; the button pauses/resumes. Reduced-motion
-// users (and no-JS visitors) see the finished state instead.
-function initMuseDemo() {
-  const demo = document.querySelector("[data-muse]");
-  if (!demo || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  const media = demo.closest(".muse__media");
-  const toggle = media.querySelector(".muse-toggle");
-  const parts = demo.querySelectorAll("[data-step]");
-  const LAST = Math.max(...[...parts].map((el) => Number(el.dataset.step)));
-  // Pause after reaching each step (ms); index = step number
-  const DELAY = [700, 900, 1500, 700, 600, 600, 900, 4500];
-
-  let step = 0;
-  let timer = null;
-  let paused = false;
-
-  const render = () => {
-    parts.forEach((el) => {
-      const from = Number(el.dataset.step);
-      const until = el.dataset.until ? Number(el.dataset.until) : Infinity;
-      el.classList.toggle("is-shown", step >= from && step < until);
-    });
-  };
-
-  const tick = () => {
-    step = step >= LAST ? 0 : step + 1;
-    render();
-    timer = setTimeout(tick, DELAY[step]);
-  };
-
-  const start = () => {
-    clearTimeout(timer);
-    timer = setTimeout(tick, DELAY[step]);
-  };
-
-  demo.classList.add("is-animated");
-  media.classList.add("is-live");
-  render();
-
-  new IntersectionObserver((entries, observer) => {
-    if (entries[0].isIntersecting) {
-      start();
-      observer.disconnect();
-    }
-  }, { threshold: 0.4 }).observe(demo);
-
-  toggle.addEventListener("click", () => {
-    paused = !paused;
-    toggle.setAttribute("aria-pressed", String(paused));
-    toggle.setAttribute("aria-label", paused ? "Play animation" : "Pause animation");
-    demo.classList.toggle("is-paused", paused);
-    if (paused) clearTimeout(timer);
-    else start();
   });
 }
 
