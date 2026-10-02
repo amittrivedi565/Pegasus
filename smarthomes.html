@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pegasus SmartHomes: luxury hospitality automation, from full room automation to enterprise buildings.">
+  <title>Pegasus SmartHomes</title>
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/smarthomes.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top" class="theme-dark">
+  <!-- ===== Navbar (ref: docs/navbar.png, docs/navbar_link_hover.png) ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="smarthomes.html" class="navbar__logo navbar__logo--smarthomes" aria-label="Pegasus SmartHomes home">
+        <img src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
+      </a>
+
+      <nav id="primary-nav" class="navbar__nav" aria-label="Primary">
+        <ul class="navbar__links">
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-products">Products</button>
+            <div class="mega" id="menu-products">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-one">Industry ERP <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="construction.html">Pegasus Atlas &middot; Construction</a></li>
+                    <li><a href="hospitality.html">Pegasus Opera &middot; Hospitality</a></li>
+                    <li><a href="#">Pegasus Aegis &middot; Defence</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-two">AI Platform <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <p class="mega__label">Build</p>
+                  <ul class="mega__list mega__list--indent">
+                    <li><a href="#">Pegasus Daedalus Studio</a></li>
+                    <li><a href="#">Pegasus Iris Integration</a></li>
+                  </ul>
+                  <p class="mega__label">Contextualise and reason</p>
+                  <ul class="mega__list mega__list--indent">
+                    <li><a href="#">Pegasus Gaia Data Cloud</a></li>
+                    <li><a href="#">Pegasus Metis Knowledge Graph</a></li>
+                    <li><a href="#">Pegasus Delphi AI Models</a></li>
+                  </ul>
+                  <p class="mega__label">Govern</p>
+                  <ul class="mega__list mega__list--indent">
+                    <li><a href="#">Pegasus Themis AI Governance</a></li>
+                    <li><a href="#">Pegasus Kairos Transformation</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-five">AI assistant <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Pegasus Muse</a></li>
+                    <li><a href="#">Muse Workspace</a></li>
+                  </ul>
+                </div>
+                <a class="mega__feature" href="smarthomes.html">
+                  <img src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
+                  <span class="mega__feature-text">Hospitality automation with every sensor you need, from a single smart room to a whole enterprise building.</span>
+                  <span class="mega__feature-link">Explore SmartHomes <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-industries">Industries</button>
+            <div class="mega" id="menu-industries">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <a class="mega__heading" href="construction.html">Construction <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Job costing</a></li>
+                    <li><a href="#">Subcontractor management</a></li>
+                    <li><a href="#">Site procurement</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="hospitality.html">Hospitality <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Multi-property finance</a></li>
+                    <li><a href="#">Purchasing and inventory</a></li>
+                    <li><a href="#">Workforce scheduling</a></li>
+                    <li><a href="smarthomes.html">Pegasus SmartHomes</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-one">Defence <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Programme management</a></li>
+                    <li><a href="#">Maintenance, repair and overhaul</a></li>
+                    <li><a href="#">Secure supply chains</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-services">Services</button>
+            <div class="mega" id="menu-services">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-three">Pegasus Odyssey <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Implementation</a></li>
+                    <li><a href="#">Data migration</a></li>
+                    <li><a href="#">Go-live support</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-three">Pegasus Argus <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">24/7 monitoring</a></li>
+                    <li><a href="#">Updates and upgrades</a></li>
+                    <li><a href="#">Expert support</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="index.html#section-three">Pegasus Athena <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Learning paths</a></li>
+                    <li><a href="#">Certifications</a></li>
+                    <li><a href="#">Strategic advisory</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-about">About</button>
+            <div class="mega" id="menu-about">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <span class="mega__heading">Company</span>
+                  <ul class="mega__list">
+                    <li><a href="#">About Pegasus</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <span class="mega__heading">Get in touch</span>
+                  <ul class="mega__list">
+                    <li><a href="mailto:connect@mypegasus.in">connect@mypegasus.in</a></li>
+                    <li><a href="tel:+917314745928">+91 0731 474 5928</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Awfis+Winway+Vijay+Nagar+Scheme+No+54+Indore+452010" target="_blank" rel="noopener">Indore office</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="lx">
+    <!-- ===== Hero ===== -->
+    <section class="lx-hero">
+      <!-- Photo: Bobby / Unsplash (unsplash.com/license) -->
+      <img class="lx-hero__bg" src="assets/images/smarthomes/hero.jpg" alt="" width="2000" height="1125">
+      <div class="container lx-hero__inner">
+        <img class="lx-hero__logo" src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
+        <h1 class="lx-hero__title">The art of the<br><em>intelligent stay.</em></h1>
+        <p class="lx-hero__text">Hospitality automation that anticipates every guest, from a single suite to an entire skyline.</p>
+        <div class="lx-actions">
+          <a href="mailto:connect@mypegasus.in?subject=Pegasus%20SmartHomes%20consultation" class="lx-btn lx-btn--solid">Arrange a private consultation</a>
+          <a href="#the-experience" class="lx-btn">Discover the experience</a>
+        </div>
+      </div>
+      <a href="#the-experience" class="lx-scroll" aria-label="Scroll to the experience"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- ===== Manifesto ===== -->
+    <section id="the-experience" class="lx-section lx-manifesto">
+      <div class="container">
+        <p class="lx-eyebrow lx-reveal">The experience</p>
+        <p class="lx-statement lx-reveal">Light that knows the hour. Air that knows the guest. A building that <em>thinks ahead</em>, quietly, invisibly, beautifully.</p>
+        <div class="lx-pillars">
+          <div class="lx-pillar lx-reveal">
+            <span class="lx-pillar__num">I</span>
+            <h3>Invisible</h3>
+            <p>Sensors and controls disappear into the architecture. Guests feel the comfort, never the technology.</p>
+          </div>
+          <div class="lx-pillar lx-reveal">
+            <span class="lx-pillar__num">II</span>
+            <h3>Intuitive</h3>
+            <p>One touch, one word or nothing at all: every room responds to the people in it.</p>
+          </div>
+          <div class="lx-pillar lx-reveal">
+            <span class="lx-pillar__num">III</span>
+            <h3>Intelligent</h3>
+            <p>Every space learns, saves energy and alerts your team before small issues become complaints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section class="lx-section lx-how">
+      <div class="container">
+        <header class="lx-head lx-reveal">
+          <p class="lx-eyebrow">How it works</p>
+          <h2 class="lx-title">A smarter stay<br>in <em>every moment.</em></h2>
+        </header>
+        <div class="lx-how__track">
+          <svg class="lx-wave" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lx-wave-grad" x1="0" x2="1">
+                <stop offset="0" stop-color="#2f63f5" stop-opacity="0"/>
+                <stop offset=".2" stop-color="#6a3ef2"/>
+                <stop offset=".6" stop-color="#b44fe0"/>
+                <stop offset="1" stop-color="#e24fc9" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="lx-wave__glow" d="M0 120 C 200 20, 350 20, 500 100 S 800 190, 950 100 S 1150 40, 1200 70"/>
+            <path class="lx-wave__line" d="M0 120 C 200 20, 350 20, 500 100 S 800 190, 950 100 S 1150 40, 1200 70"/>
+          </svg>
+          <ol class="lx-steps">
+          <li class="lx-step lx-reveal">
+            <span class="lx-step__ring"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="14" cy="4.5" r="1.8"/><path d="M8 21l3-6 3 2v4M11 15l1-5 4 2 3-1M12 10L8 11l-2 4"/></svg></span>
+            <span class="lx-step__num">01</span>
+            <h3>Detect motion</h3>
+            <p>Microwave sensors notice the moment someone enters.</p>
+          </li>
+          <li class="lx-step lx-reveal">
+            <span class="lx-step__ring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></span>
+            <span class="lx-step__num">02</span>
+            <h3>Automate lights</h3>
+            <p>Lighting responds instantly, and switches off when the room empties.</p>
+          </li>
+          <li class="lx-step lx-reveal">
+            <span class="lx-step__ring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18M5 4v16M19 4v16M5 20c2.5-4 2.5-12 0-16M19 20c-2.5-4-2.5-12 0-16M9 4v16M15 4v16"/></svg></span>
+            <span class="lx-step__num">03</span>
+            <h3>Control curtains</h3>
+            <p>Curtains glide open with the sunrise or close with a single tap.</p>
+          </li>
+          <li class="lx-step lx-reveal">
+            <span class="lx-step__ring"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+            <span class="lx-step__num">04</span>
+            <h3>Manage from your phone</h3>
+            <p>Every room, scene and schedule in one app, from anywhere.</p>
+          </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== The collection (products) ===== -->
+    <section class="lx-section lx-section--alt lx-collection">
+      <div class="container">
+        <header class="lx-head lx-head--split lx-reveal">
+          <div>
+            <p class="lx-eyebrow">The collection</p>
+            <h2 class="lx-title">Designed devices,<br><em>quietly brilliant.</em></h2>
+          </div>
+          <p class="lx-head__text">Each Pegasus SmartHomes device is built to disappear into beautiful interiors and work flawlessly, day and night.</p>
+        </header>
+        <!-- Each stage shows the device's automation flow over a real interior -->
+        <article class="lx-product lx-product--node">
+          <div class="lx-product__stage lx-reveal" style="--px: 76%; --py: 40%">
+            <!-- Photo: Neon Wang / Unsplash (unsplash.com/license) -->
+            <img src="assets/images/smarthomes/flow-node.jpg" alt="Hotel lounge with warm pendant and ceiling lighting" width="1400" height="1120" loading="lazy">
+            <span class="lx-ping" aria-hidden="true"><i></i><i></i><i></i></span>
+            <div class="lx-device" aria-hidden="true"><span class="lx-device__name"><i></i>Blaze 2 Node</span><span class="lx-device__room">Lounge</span><span class="lx-device__row">Pendants<b class="lx-toggle is-on"></b></span><span class="lx-device__row">Downlights<b class="lx-toggle is-on"></b></span></div>
+            <ol class="lx-flow" aria-label="Blaze 2 Node automation flow"><li style="--i: 0"><span>01</span>Evening scene triggered</li><li style="--i: 1"><span>02</span>Pendants on &middot; 70%</li><li style="--i: 2"><span>03</span>Downlights dimmed to 40%</li></ol>
+          </div>
+          <div class="lx-product__text lx-reveal">
+            <p class="lx-eyebrow">Smart lighting automation</p>
+            <p class="lx-product__name">Blaze 2 Node</p>
+            <h3 class="lx-product__title">Small device.<br><em>Big convenience.</em></h3>
+            <p class="lx-product__body">A retrofit module that makes your existing switches smart. Control lights from the mobile app, by voice or through automations, without changing a single switch plate.</p>
+            <ul class="lx-product__feats"><li><strong>Controls two switches</strong><span>Independent on/off for two circuits</span></li><li><strong>Retrofit, no rewiring</strong><span>Fits behind your existing switchboard</span></li><li><strong>Works with the mobile app</strong><span>Plus voice and scheduled automations</span></li><li><strong>Reliable and stable</strong><span>Built for round-the-clock hospitality use</span></li></ul>
+          </div>
+        </article>
+        <article class="lx-product lx-product--sensor lx-product--flip">
+          <div class="lx-product__stage lx-reveal" style="--px: 53.4%; --py: 20.3%">
+            <!-- Photo: Vitalii Khodzinskyi / Unsplash (unsplash.com/license) -->
+            <img src="assets/images/smarthomes/flow-sensor.jpg" alt="Hotel corridor with a ceiling-mounted motion sensor" width="1400" height="1120" loading="lazy">
+            <span class="lx-ping" aria-hidden="true"><i></i><i></i><i></i></span>
+            <div class="lx-device" aria-hidden="true"><span class="lx-device__name"><i></i>MMC Sensor</span><span class="lx-device__room">Corridor, level 12</span><span class="lx-device__row">Presence<b class="lx-device__live">Live</b></span></div>
+            <ol class="lx-flow" aria-label="MMC Microwave Sensor automation flow"><li style="--i: 0"><span>01</span>Motion detected</li><li style="--i: 1"><span>02</span>Corridor lights &middot; 100%</li><li style="--i: 2"><span>03</span>Auto-off after 2 min</li></ol>
+          </div>
+          <div class="lx-product__text lx-reveal">
+            <p class="lx-eyebrow">Automatic lighting control</p>
+            <p class="lx-product__name">MMC Microwave Sensor</p>
+            <h3 class="lx-product__title">Lights when you need them.<br><em>Off when you don't.</em></h3>
+            <p class="lx-product__body">The microwave sensor detects movement and turns lights on and off automatically. It is ideal for washrooms, corridors and common areas.</p>
+            <ul class="lx-product__feats"><li><strong>Motion detection</strong><span>Senses presence, even through light partitions</span></li><li><strong>Automatic on/off</strong><span>No switches to reach for</span></li><li><strong>Energy saving</strong><span>Lights never stay on in empty rooms</span></li><li><strong>Reliable performance</strong><span>Discreet ceiling mount for any space</span></li></ul>
+          </div>
+        </article>
+        <article class="lx-product lx-product--curtain">
+          <div class="lx-product__stage lx-reveal" style="--px: 47%; --py: 25%">
+            <!-- Photo: Anton Sobotyak / Unsplash (unsplash.com/license) -->
+            <img src="assets/images/smarthomes/flow-curtain.jpg" alt="Morning sunlight through sheer curtains onto a bed" width="1400" height="1120" loading="lazy">
+            <span class="lx-ping" aria-hidden="true"><i></i><i></i><i></i></span>
+            <div class="lx-device" aria-hidden="true"><span class="lx-device__name"><i></i>Curtain Motor</span><span class="lx-device__room">Suite 1204</span><span class="lx-device__row">Open<b class="lx-device__pct">65%</b></span><span class="lx-device__bar"><i></i></span></div>
+            <ol class="lx-flow" aria-label="Smart Curtain Motor automation flow"><li style="--i: 0"><span>01</span>06:50 &middot; Alarm</li><li style="--i: 1"><span>02</span>Curtains opening</li><li style="--i: 2"><span>03</span>Daylight scene on</li></ol>
+          </div>
+          <div class="lx-product__text lx-reveal">
+            <p class="lx-eyebrow">Effortless curtain automation</p>
+            <p class="lx-product__name">Smart Curtain Motor</p>
+            <h3 class="lx-product__title">Natural light.<br><em>On your terms.</em></h3>
+            <p class="lx-product__body">A smart curtain motor with built-in Wi-Fi and remote control. Open or close your curtains with a tap, a voice command or an automation.</p>
+            <ul class="lx-product__feats"><li><strong>App and remote control</strong><span>Every curtain, from anywhere</span></li><li><strong>Scheduled timings</strong><span>Open at sunrise, close at sunset</span></li><li><strong>Better natural light</strong><span>Daylight exactly when you want it</span></li><li><strong>Modern, elegant living</strong><span>Whisper-quiet, clean-lined track</span></li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== A day in the suite ===== -->
+    <section class="lx-section">
+      <div class="container">
+        <header class="lx-head lx-reveal">
+          <p class="lx-eyebrow">A day in the suite</p>
+          <h2 class="lx-title">Choreographed from arrival<br>to <em>sunrise.</em></h2>
+        </header>
+        <!-- Photos (Unsplash): arrival @albert-stoynov, welcome @sung-jin-cho, evening @archee-lal, morning @fujiphilm -->
+        <article class="lx-moment">
+          <figure class="lx-moment__media lx-reveal">
+            <img src="assets/images/smarthomes/arrival.jpg" alt="Elegant hotel entrance glowing at night" width="1200" height="1500" loading="lazy">
+          </figure>
+          <div class="lx-moment__text lx-reveal">
+            <span class="lx-moment__num">01</span>
+            <p class="lx-eyebrow">18:40 <span aria-hidden="true">&mdash;</span> Arrival</p>
+            <h3 class="lx-moment__title">Recognised before the door</h3>
+            <p class="lx-moment__body">As the guest checks in, their suite comes alive. The digital key activates, the corridor lights guide the way and the room is already at their preferred temperature.</p>
+            <ul class="lx-specs"><li>Digital key activates on check-in</li><li>Corridor lighting guides the way</li><li>Suite pre-cooled to the guest's preference</li></ul>
+          </div>
+        </article>
+        <article class="lx-moment lx-moment--flip">
+          <figure class="lx-moment__media lx-reveal">
+            <img src="assets/images/smarthomes/welcome.jpg" alt="Hotel suite with a warm lamp and a city view through tall windows" width="1200" height="1500" loading="lazy">
+          </figure>
+          <div class="lx-moment__text lx-reveal">
+            <span class="lx-moment__num">02</span>
+            <p class="lx-eyebrow">18:45 <span aria-hidden="true">&mdash;</span> Welcome</p>
+            <h3 class="lx-moment__title">A suite that remembers</h3>
+            <p class="lx-moment__body">Curtains draw back to reveal the view, lighting settles into a warm welcome scene, and the music and preferences from the guest's last stay are ready and waiting.</p>
+            <ul class="lx-specs"><li>Curtains open to the view</li><li>Personal welcome lighting scene</li><li>Preferences carried over from past stays</li></ul>
+          </div>
+        </article>
+        <article class="lx-moment">
+          <figure class="lx-moment__media lx-reveal">
+            <img src="assets/images/smarthomes/evening.jpg" alt="Bedroom bathed in warm evening light" width="1200" height="1500" loading="lazy">
+          </figure>
+          <div class="lx-moment__text lx-reveal">
+            <span class="lx-moment__num">03</span>
+            <p class="lx-eyebrow">22:30 <span aria-hidden="true">&mdash;</span> Evening</p>
+            <h3 class="lx-moment__title">Evening, in a single word</h3>
+            <p class="lx-moment__body">Say “relax” and the lights dim, the curtains close and the air cools slightly. Do not disturb reaches housekeeping instantly, with no sign on the door.</p>
+            <ul class="lx-specs"><li>Voice scenes with Pegasus Muse</li><li>Lights, curtains and climate in harmony</li><li>Do not disturb shared with staff instantly</li></ul>
+          </div>
+        </article>
+        <article class="lx-moment lx-moment--flip">
+          <figure class="lx-moment__media lx-reveal">
+            <img src="assets/images/smarthomes/morning.jpg" alt="Morning sunlight glowing through sheer curtains" width="1200" height="1500" loading="lazy">
+          </figure>
+          <div class="lx-moment__text lx-reveal">
+            <span class="lx-moment__num">04</span>
+            <p class="lx-eyebrow">06:50 <span aria-hidden="true">&mdash;</span> Morning</p>
+            <h3 class="lx-moment__title">Sunrise, on schedule</h3>
+            <p class="lx-moment__body">Curtains open gently with the alarm, the lights rise to daylight and the bathroom is warm and ready, so every guest wakes naturally and on time.</p>
+            <ul class="lx-specs"><li>Curtains open with the alarm</li><li>Circadian lighting rises to daylight</li><li>Bathroom warmed before the guest steps in</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Sensors ===== -->
+    <section class="lx-section lx-section--alt">
+      <div class="container">
+        <header class="lx-head lx-head--split lx-reveal">
+          <div>
+            <p class="lx-eyebrow">The sensors</p>
+            <h2 class="lx-title">Every sensor,<br><em>beautifully hidden.</em></h2>
+          </div>
+          <p class="lx-head__text">Discreet, wireless and designed for hospitality, each sensor quietly feeds one intelligent system that looks after your guests and your building.</p>
+        </header>
+        <div class="lx-sensors">
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2M3 9a9 9 0 0 1 2-4M21 9a9 9 0 0 0-2-4"/></svg>
+            <h3>Presence</h3>
+            <p>Knows when a room is occupied, and when it isn't.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 10v6"/></svg>
+            <h3>Climate</h3>
+            <p>Temperature and humidity tuned to every guest.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8"/></svg>
+            <h3>Air quality</h3>
+            <p>CO₂ and air freshness, balanced automatically.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+            <h3>Light</h3>
+            <p>Daylight-aware scenes that follow the hour.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>
+            <h3>Water</h3>
+            <p>Leak detection that stops damage before it spreads.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .5 2 1.5 3 2.5 3 0-3-1-5 0-8z"/></svg>
+            <h3>Fire safety</h3>
+            <p>Smoke and heat alerts sent straight to your team.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></svg>
+            <h3>Energy</h3>
+            <p>Room-by-room metering that cuts waste quietly.</p>
+          </div>
+          <div class="lx-sensor lx-reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4M12 15v2"/></svg>
+            <h3>Access</h3>
+            <p>Keyless entry and security, room by room.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== One app ===== -->
+    <section class="lx-section lx-appsec">
+      <div class="container lx-app">
+        <div class="lx-app__phone lx-reveal" aria-hidden="true">
+          <div class="lx-app__screen">
+            <div class="lx-app__bar"><span>21:45</span><span class="lx-app__notch"></span><span>5G</span></div>
+            <img class="lx-app__logo" src="assets/images/smarthomes-logo.png" alt="" width="729" height="118">
+            <div class="lx-app__tabs"><span class="is-active">Home</span><span>Rooms</span><span>Scenes</span></div>
+            <div class="lx-app__grid"><div class="lx-app__tile is-on"><i></i><strong>Living room</strong><span>Lights</span></div><div class="lx-app__tile is-on"><i></i><strong>Curtains</strong><span>Open</span></div><div class="lx-app__tile"><i></i><strong>Bedroom</strong><span>Lights</span></div><div class="lx-app__tile is-on"><i></i><strong>Lobby</strong><span>Lights</span></div><div class="lx-app__tile is-on"><i></i><strong>Washroom</strong><span>Auto sensor</span></div><div class="lx-app__tile"><i></i><strong>Kitchen</strong><span>Lights</span></div></div>
+          </div>
+        </div>
+        <div class="lx-app__text lx-reveal">
+          <p class="lx-eyebrow">Your property in your hands</p>
+          <h2 class="lx-title">One app.<br><em>Complete control.</em></h2>
+          <p class="lx-control__body">Control lights, curtains and more from a single, easy-to-use mobile app, available on Android and iOS.</p>
+          <ul class="lx-app__feats">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"/></svg><span>Control devices from anywhere</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg><span>Create schedules and scenes</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span>Voice control with Siri and Google</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12l2 2 4-4"/></svg><span>A simple, elegant interface</span></li>
+          </ul>
+          <p class="lx-app__stores"><span>Android</span><span>iOS</span><span>Siri</span><span>Google Assistant</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Scale ===== -->
+    <section class="lx-scale">
+      <!-- Photo: Petar Avramoski / Unsplash (unsplash.com/license) -->
+      <img class="lx-scale__bg" src="assets/images/sectors/construction.jpg" alt="" width="1600" height="900" loading="lazy">
+      <div class="container lx-scale__inner">
+        <header class="lx-head lx-reveal">
+          <p class="lx-eyebrow">Scale</p>
+          <h2 class="lx-title">From one suite<br>to an <em>entire skyline.</em></h2>
+        </header>
+        <div class="lx-tiers">
+          <div class="lx-tier lx-reveal">
+            <p class="lx-eyebrow">Suite</p>
+            <h3>Full room automation</h3>
+            <p>Lighting, climate, curtains, media and access orchestrated around one guest, in one beautifully calm space.</p>
+          </div>
+          <div class="lx-tier lx-reveal">
+            <p class="lx-eyebrow">Property</p>
+            <h3>Every room, one view</h3>
+            <p>Rooms, corridors, kitchens and plant rooms on one live dashboard, connected to Pegasus Opera and your property systems.</p>
+          </div>
+          <div class="lx-tier lx-reveal">
+            <p class="lx-eyebrow">Enterprise</p>
+            <h3>An entire skyline</h3>
+            <p>Hotels, residences and towers across cities, with central monitoring, energy optimisation and round-the-clock support from Pegasus Argus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Scene controller (interactive) ===== -->
+    <section class="lx-section">
+      <div class="container lx-control">
+        <div class="lx-control__text lx-reveal">
+          <p class="lx-eyebrow">Guest control</p>
+          <h2 class="lx-title">Your suite,<br><em>in your hand.</em></h2>
+          <p class="lx-control__body">Guests set the mood from the in-room panel, their phone or simply their voice with Pegasus Muse. Your team sees every room, live, from one elegant dashboard.</p>
+          <ul class="lx-specs lx-specs--inline"><li>In-room panel</li><li>Guest app</li><li>Voice with Pegasus Muse</li><li>Staff dashboard</li></ul>
+          <p class="lx-hint">Try a scene on the panel.</p>
+        </div>
+
+        <div class="lx-panel lx-reveal" data-scene-panel style="--glow: 0.9">
+          <div class="lx-panel__glow" aria-hidden="true"></div>
+          <div class="lx-panel__head">
+            <div>
+              <p class="lx-eyebrow">Suite 1204</p>
+              <p class="lx-panel__guest">Good evening</p>
+            </div>
+            <span class="lx-panel__status"><i></i>Occupied</span>
+          </div>
+          <div class="lx-panel__scenes" role="group" aria-label="Scenes"><button type="button" class="lx-scene is-active" data-scene="welcome" data-lights="Warm · 70%" data-climate="22°C" data-curtains="Open" data-music="Jazz · low" data-glow="0.9" aria-pressed="true">Welcome</button><button type="button" class="lx-scene" data-scene="relax" data-lights="Amber · 35%" data-climate="23°C" data-curtains="Half" data-music="Ambient" data-glow="0.55" aria-pressed="false">Relax</button><button type="button" class="lx-scene" data-scene="sleep" data-lights="Off" data-climate="20°C" data-curtains="Closed" data-music="Off" data-glow="0.12" aria-pressed="false">Sleep</button><button type="button" class="lx-scene" data-scene="away" data-lights="Off" data-climate="Eco · 26°C" data-curtains="Closed" data-music="Off" data-glow="0.0" aria-pressed="false">Away</button></div>
+          <dl class="lx-panel__grid" aria-live="polite">
+            <div><dt>Lights</dt><dd data-field="lights">Warm · 70%</dd></div>
+            <div><dt>Climate</dt><dd data-field="climate">22°C</dd></div>
+            <div><dt>Curtains</dt><dd data-field="curtains">Open</dd></div>
+            <div><dt>Music</dt><dd data-field="music">Jazz · low</dd></div>
+          </dl>
+          <div class="lx-panel__sensors" aria-hidden="true">
+            <span><i></i>Presence</span><span><i></i>Air</span><span><i></i>Water</span><span><i></i>Energy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Connected ===== -->
+    <section class="lx-connect">
+      <div class="container">
+        <p class="lx-eyebrow">Connected to everything you run</p>
+        <p class="lx-connect__list"><span>Pegasus Opera</span><span class="lx-dot" aria-hidden="true"></span><span>Property management</span><span class="lx-dot" aria-hidden="true"></span><span>Point of sale</span><span class="lx-dot" aria-hidden="true"></span><span>Building management</span><span class="lx-dot" aria-hidden="true"></span><span>Energy systems</span><span class="lx-dot" aria-hidden="true"></span><span>Pegasus Muse</span></p>
+      </div>
+    </section>
+
+    <!-- ===== Close ===== -->
+    <section class="lx-close">
+      <!-- Photo: mr_wdh / Unsplash (unsplash.com/license) -->
+      <img class="lx-close__bg" src="assets/images/smarthomes/close.jpg" alt="" width="1800" height="1012" loading="lazy">
+      <div class="container lx-close__inner lx-reveal">
+        <p class="lx-eyebrow">Private consultation</p>
+        <h2 class="lx-close__title">Let us design your<br><em>intelligent property.</em></h2>
+        <p class="lx-close__text">From a single signature suite to a portfolio of buildings, our SmartHomes team in Indore will survey, design and deliver it with you.</p>
+        <div class="lx-actions lx-actions--center">
+          <a href="mailto:connect@mypegasus.in?subject=Pegasus%20SmartHomes%20consultation" class="lx-btn lx-btn--solid">Arrange a consultation</a>
+          <a href="mailto:connect@mypegasus.in?subject=Pegasus%20SmartHomes%20site%20survey" class="lx-btn">Book a site survey</a>
+        </div>
+        <p class="lx-close__contact">
+          <a href="tel:+917314745928">+91 0731 474 5928</a><span aria-hidden="true">&middot;</span><a href="mailto:connect@mypegasus.in">connect@mypegasus.in</a><span aria-hidden="true">&middot;</span><span>Vijay Nagar, Indore</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (ref: docs/footer.png) ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pegasus home">
+          <img src="assets/images/logo-white.png" alt="Pegasus" width="432" height="111">
+        </a>
+
+        <ul class="footer__contact">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg>
+            <a href="#">Chat with a Pegasus expert</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
+            <div>
+              <span class="footer__label">Phone</span>
+              <p class="footer__phone"><a href="tel:+917314745928">+91 0731 474 5928</a></p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <div>
+              <span class="footer__label">Email</span>
+              <a href="mailto:connect@mypegasus.in" class="footer__value">connect@mypegasus.in</a>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div>
+              <span class="footer__label">Office</span>
+              <address class="footer__value">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Awfis+Winway+Vijay+Nagar+Scheme+No+54+Indore+452010" target="_blank" rel="noopener">
+                  Awfis Winway, 7, Vijay Nagar, Scheme No 54,<br>Indore, Madhya Pradesh 452010
+                </a>
+              </address>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+        <nav class="footer__col" aria-label="Quick links">
+          <h2 class="footer__heading">Quick links</h2>
+          <ul>
+            <li><a href="#">Trust Center</a></li>
+            <li><a href="#">Pegasus Store</a></li>
+            <li><a href="#">Technology platform</a></li>
+            <li><a href="#">Industries</a></li>
+            <li><a href="#">Find a partner</a></li>
+            <li><a href="#">Trials and demos</a></li>
+            <li><a href="#">Find services</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Trending">
+          <h2 class="footer__heading">Trending</h2>
+          <ul>
+            <li><a href="#">Pegasus AI Platform</a></li>
+            <li><a href="construction.html">Pegasus Atlas</a></li>
+            <li><a href="smarthomes.html">Pegasus SmartHomes</a></li>
+            <li><a href="#">Pegasus Aegis</a></li>
+            <li><a href="#">Pegasus Odyssey</a></li>
+            <li><a href="#">Pegasus Argus</a></li>
+            <li><a href="#">Industry AI</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="About Pegasus">
+          <h2 class="footer__heading">About Pegasus</h2>
+          <ul>
+            <li><a href="#">Company information</a></li>
+            <li><a href="#">Worldwide directory</a></li>
+            <li><a href="#">Investor relations</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News and press</a></li>
+            <li><a href="#">Blogs and resources</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Customer stories</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Site information">
+          <h2 class="footer__heading">Site information</h2>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Legal disclosure</a></li>
+            <li><a href="#">Copyright</a></li>
+            <li><a href="#">Trademark</a></li>
+            <li><a href="#">Cookie statement</a></li>
+            <li><a href="#">Cookie preferences</a></li>
+          </ul>
+        </nav>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Pegasus. All rights reserved.</p>
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Pegasus on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 9.5v8M6.5 6.5v.01M10.5 17.5v-4.5a3 3 0 0 1 6 0v4.5M10.5 9.5v8" /></svg></a></li>
+          <li><a href="#" aria-label="Pegasus on X"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></a></li>
+          <li><a href="#" aria-label="Pegasus on YouTube"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></a></li>
+          <li><a href="mailto:connect@mypegasus.in" aria-label="Email Pegasus"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+        </ul>
+      </div>
+
+      <a href="#top" class="footer__top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14M12 20V9M7 13l5-5 5 5"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating contact button -->
+  <a href="#" class="contact-fab">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v9H8l-4 3.5z"/><path d="M19 9h1v9l-3-2.5h-6v-1.5"/></svg>
+    <span>Contact us</span>
+  </a>
+
+</body>
+</html>

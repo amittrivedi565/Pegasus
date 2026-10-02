@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pegasus — enterprise technology that connects everything.">
+  <title>Pegasus</title>
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- ===== Navbar (ref: docs/navbar.png, docs/navbar_link_hover.png) ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Pegasus home">
+        <img src="assets/images/logo.png" alt="Pegasus" width="432" height="111">
+      </a>
+
+      <nav id="primary-nav" class="navbar__nav" aria-label="Primary">
+        <ul class="navbar__links">
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-products">Products</button>
+            <div class="mega" id="menu-products">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-one">Industry ERP <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="construction.html">Pegasus Atlas &middot; Construction</a></li>
+                    <li><a href="hospitality.html">Pegasus Opera &middot; Hospitality</a></li>
+                    <li><a href="#">Pegasus Aegis &middot; Defence</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-two">AI Platform <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <p class="mega__label">Build</p>
+                  <ul class="mega__list mega__list--indent">
+                    <li><a href="#">Pegasus Daedalus Studio</a></li>
+                    <li><a href="#">Pegasus Iris Integration</a></li>
+                  </ul>
+                  <p class="mega__label">Contextualise and reason</p>
+                  <ul class="mega__list mega__list--indent">
+                    <li><a href="#">Pegasus Gaia Data Cloud</a></li>
+                    <li><a href="#">Pegasus Metis Knowledge Graph</a></li>
+                    <li><a href="#">Pegasus Delphi AI Models</a></li>
+                  </ul>
+                  <p class="mega__label">Govern</p>
+                  <ul class="mega__list mega__list--indent">
+                    <li><a href="#">Pegasus Themis AI Governance</a></li>
+                    <li><a href="#">Pegasus Kairos Transformation</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-five">AI assistant <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Pegasus Muse</a></li>
+                    <li><a href="#">Muse Workspace</a></li>
+                  </ul>
+                </div>
+                <a class="mega__feature" href="smarthomes.html">
+                  <img src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
+                  <span class="mega__feature-text">Hospitality automation with every sensor you need, from a single smart room to a whole enterprise building.</span>
+                  <span class="mega__feature-link">Explore SmartHomes <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-industries">Industries</button>
+            <div class="mega" id="menu-industries">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <a class="mega__heading" href="construction.html">Construction <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Job costing</a></li>
+                    <li><a href="#">Subcontractor management</a></li>
+                    <li><a href="#">Site procurement</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="hospitality.html">Hospitality <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Multi-property finance</a></li>
+                    <li><a href="#">Purchasing and inventory</a></li>
+                    <li><a href="#">Workforce scheduling</a></li>
+                    <li><a href="smarthomes.html">Pegasus SmartHomes</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-one">Defence <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Programme management</a></li>
+                    <li><a href="#">Maintenance, repair and overhaul</a></li>
+                    <li><a href="#">Secure supply chains</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-services">Services</button>
+            <div class="mega" id="menu-services">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-three">Pegasus Odyssey <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Implementation</a></li>
+                    <li><a href="#">Data migration</a></li>
+                    <li><a href="#">Go-live support</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-three">Pegasus Argus <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">24/7 monitoring</a></li>
+                    <li><a href="#">Updates and upgrades</a></li>
+                    <li><a href="#">Expert support</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <a class="mega__heading" href="#section-three">Pegasus Athena <svg class="mega__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                  <ul class="mega__list">
+                    <li><a href="#">Learning paths</a></li>
+                    <li><a href="#">Certifications</a></li>
+                    <li><a href="#">Strategic advisory</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-expanded="false" aria-controls="menu-about">About</button>
+            <div class="mega" id="menu-about">
+              <div class="mega__inner">
+                <div class="mega__col">
+                  <span class="mega__heading">Company</span>
+                  <ul class="mega__list">
+                    <li><a href="#">About Pegasus</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                  </ul>
+                </div>
+                <div class="mega__col">
+                  <span class="mega__heading">Get in touch</span>
+                  <ul class="mega__list">
+                    <li><a href="mailto:connect@mypegasus.in">connect@mypegasus.in</a></li>
+                    <li><a href="tel:+917314745928">+91 0731 474 5928</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Awfis+Winway+Vijay+Nagar+Scheme+No+54+Indore+452010" target="_blank" rel="noopener">Indore office</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero (ref: docs/hero_section.png) ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Enterprise technology</p>
+          <h1 class="hero__title">Connect everything.<br>Achieve anything.</h1>
+          <p class="hero__text">
+            Pegasus brings your finance, supply chain, people and customer operations onto
+            one intelligent platform. Unify your data, automate processes with built-in AI
+            and scale securely in the cloud &mdash; so your business moves faster.
+          </p>
+        </div>
+
+        <!-- Tile collage. Photo tiles show a gradient placeholder until a
+             photo is set, e.g. style="--photo: url('assets/images/hero-1.jpg')" -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero-tile hero-tile--toolbar">
+            <svg viewBox="0 0 12 12"><path d="M2 3h8v5H5l-2 2V8H2z" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+            <svg viewBox="0 0 12 12"><path d="M6 1.5l4 2.25v4.5L6 10.5 2 8.25v-4.5zM2 3.75L6 6l4-2.25M6 6v4.5" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+            <svg viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 5h4M4 7h4" stroke="currentColor" stroke-width="1"/></svg>
+          </div>
+
+          <div class="hero-tile hero-tile--brand">
+            <svg class="hero-tile__mark" viewBox="0 0 32 32">
+              <path d="M16 1.5L30.5 16 16 30.5 1.5 16z" fill="rgba(255,255,255,0.28)"/>
+              <path d="M16 8.5c.6 3.8 2.7 5.9 6.5 6.5-3.8.6-5.9 2.7-6.5 6.5-.6-3.8-2.7-5.9-6.5-6.5 3.8-.6 5.9-2.7 6.5-6.5z" fill="#fff"/>
+            </svg>
+          </div>
+          <div class="hero-tile hero-tile--strip"></div>
+          <div class="hero-tile hero-tile--violet"></div>
+          <div class="hero-tile hero-tile--split"></div>
+          <p class="hero__wordmark">Pegasus<br>Connect</p>
+
+          <div class="hero-tile hero-tile--photo hero-tile--photo-1">
+            <div class="hero-chart">
+              <span style="--h: 40%"></span><span style="--h: 70%"></span><span style="--h: 55%"></span>
+              <span style="--h: 90%"></span><span style="--h: 35%"></span><span style="--h: 65%"></span>
+              <span style="--h: 80%"></span><span style="--h: 50%"></span><span style="--h: 75%"></span>
+            </div>
+          </div>
+
+          <div class="hero-tile hero-tile--lilac"></div>
+          <div class="hero-tile hero-tile--photo hero-tile--photo-2">
+            <div class="hero-avatar"></div>
+          </div>
+          <div class="hero-tile hero-tile--chat">
+            <svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z" fill="currentColor"/></svg>
+            <span class="hero-tile__line"></span>
+            <svg viewBox="0 0 12 12"><path d="M1.5 6.5L10.5 2 8 10.5 6 7z" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="hero-tile hero-tile--photo hero-tile--photo-3">
+            <div class="hero-panel"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 1: ERP by industry (ref: docs/section_one.png) ===== -->
+    <section id="section-one" class="section stories">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">One ERP, built for the industries that keep the world running</h2>
+          <p class="section-subtitle">Pegasus ERP unifies finance, procurement, projects, people and operations on one intelligent platform, with a dedicated product suite for every industry.</p>
+        </header>
+
+        <div class="stories__grid">
+          <ul class="stories__list">
+            <li class="story is-active">
+              <h3>
+                <button class="story__title" aria-expanded="true" aria-controls="erp-construction">Construction</button>
+              </h3>
+              <div class="story__body" id="erp-construction">
+                <div>
+                  <p><strong>Control every project from bid to handover.</strong> Connect job costing, subcontractor management, equipment and site procurement in one ERP, so budgets, schedules and compliance stay on track across every project.</p>
+                  <a href="construction.html" class="link-arrow">Explore Pegasus Atlas <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </div>
+            </li>
+            <li class="story">
+              <h3>
+                <button class="story__title" aria-expanded="false" aria-controls="erp-hospitality">Hospitality</button>
+              </h3>
+              <div class="story__body" id="erp-hospitality">
+                <div>
+                  <p><strong>Run every property from one platform.</strong> Manage multi-property finance, purchasing, inventory and workforce scheduling for hotels, resorts and restaurants, while keeping the guest experience at the centre.</p>
+                  <a href="hospitality.html" class="link-arrow">Explore Pegasus Opera <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </div>
+            </li>
+            <li class="story">
+              <h3>
+                <button class="story__title" aria-expanded="false" aria-controls="erp-defence">Defence</button>
+              </h3>
+              <div class="story__body" id="erp-defence">
+                <div>
+                  <p><strong>Mission-ready operations with full traceability.</strong> Manage complex programmes, maintenance, repair and overhaul (MRO) and secure supply chains, with the audit trails and access controls defence organisations require.</p>
+                  <a href="#" class="link-arrow">Explore Pegasus Aegis <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Photos from Unsplash (unsplash.com/license): construction @petar-avramoski, hospitality @zoshua-colah,
+               defence @arturo-alvarez -->
+          <div class="stories__media">
+            <div class="story-media story-media--construction is-active">
+              <img src="assets/images/sectors/construction.jpg" alt="New York City skyline at night with the Empire State Building lit up" width="1600" height="900">
+            </div>
+            <div class="story-media story-media--hospitality">
+              <img src="assets/images/sectors/hospitality.jpg" alt="Grand hotel lobby with tall windows and palm trees" width="1600" height="900" loading="lazy">
+            </div>
+            <div class="story-media story-media--defence">
+              <img src="assets/images/sectors/defence.jpg" alt="F-35 fighter jet rolling through the sky with vapour trails from its wingtips" width="1600" height="900" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Pegasus Services (ref: docs/section_three.png) ===== -->
+    <section id="section-three" class="section services">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Accelerate success with Pegasus services</h2>
+          <p class="section-subtitle">From first blueprint to everyday excellence, our experts stay with you at every step.</p>
+        </header>
+
+        <div class="services__grid">
+          <!-- Odyssey: implementation journey -->
+          <article class="svc-card">
+            <div class="svc-visual svc-visual--odyssey" aria-hidden="true">
+              <p class="svc-visual__label"><img src="assets/images/logo-white.png" alt="Pegasus" width="432" height="111"><span>Odyssey</span></p>
+              <ol class="svc-journey">
+                <li class="is-done"><span></span>Discover</li>
+                <li class="is-done"><span></span>Design</li>
+                <li class="is-current"><span></span>Build</li>
+                <li><span></span>Go live</li>
+              </ol>
+            </div>
+            <h3 class="svc-card__title">Pegasus Odyssey</h3>
+            <p class="svc-card__eyebrow">Implementation and migration</p>
+            <p class="svc-card__text">Move to Pegasus ERP with a proven, phased methodology. Our specialists migrate your data, configure best practices and guide your teams all the way to a smooth go-live.</p>
+            <a href="#" class="link-arrow">Plan your journey <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+
+          <!-- Argus: managed services & monitoring -->
+          <article class="svc-card">
+            <div class="svc-visual svc-visual--split" aria-hidden="true">
+              <div class="svc-panel">
+                <p class="svc-panel__title">Argus &middot; Live monitoring</p>
+                <ul class="svc-status">
+                  <li><span class="svc-dot"></span>ERP core<em>Healthy</em></li>
+                  <li><span class="svc-dot"></span>Integrations<em>Healthy</em></li>
+                  <li><span class="svc-dot"></span>Data platform<em>Healthy</em></li>
+                </ul>
+                <svg class="svc-spark" viewBox="0 0 120 30" preserveAspectRatio="none"><path d="M0 22 L15 18 L30 20 L45 12 L60 15 L75 8 L90 11 L105 5 L120 7"/></svg>
+              </div>
+              <div class="svc-tiles">
+                <span class="svc-tile svc-tile--blue"></span>
+                <span class="svc-tile svc-tile--split-pink"></span>
+                <span class="svc-tile svc-tile--navy"></span>
+                <span class="svc-tile svc-tile--pale"></span>
+                <span class="svc-tile svc-tile--split-violet"></span>
+                <span class="svc-tile svc-tile--bright"></span>
+              </div>
+            </div>
+            <h3 class="svc-card__title">Pegasus Argus</h3>
+            <p class="svc-card__eyebrow">Managed services and support</p>
+            <p class="svc-card__text">Like the hundred-eyed guardian, Argus watches over your systems around the clock, with proactive monitoring, updates and expert support that keep your business running.</p>
+            <a href="#" class="link-arrow">Explore support plans <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+
+          <!-- Athena: training & advisory -->
+          <article class="svc-card">
+            <div class="svc-visual svc-visual--split svc-visual--alt" aria-hidden="true">
+              <div class="svc-panel">
+                <p class="svc-panel__title">Athena Academy</p>
+                <ul class="svc-courses">
+                  <li>Finance essentials<span class="svc-bar" style="--p: 85%"></span></li>
+                  <li>AI for ERP<span class="svc-bar" style="--p: 60%"></span></li>
+                  <li>Supply chain pro<span class="svc-bar" style="--p: 35%"></span></li>
+                </ul>
+              </div>
+              <div class="svc-tiles">
+                <span class="svc-tile svc-tile--blue"></span>
+                <span class="svc-tile svc-tile--split-pink"></span>
+                <span class="svc-tile svc-tile--navy"></span>
+                <span class="svc-tile svc-tile--pale"></span>
+                <span class="svc-tile svc-tile--split-violet"></span>
+                <span class="svc-tile svc-tile--bright"></span>
+              </div>
+            </div>
+            <h3 class="svc-card__title">Pegasus Athena</h3>
+            <p class="svc-card__eyebrow">Training and advisory</p>
+            <p class="svc-card__text">Build lasting expertise with guided learning paths, certifications and strategic advisory, so your people get the most from every Pegasus product.</p>
+            <a href="#" class="link-arrow">Start learning <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: AI across every function (ref: docs/section_four.png) ===== -->
+    <section id="section-four" class="section functions">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">When every function runs on Pegasus AI, growth has no limits</h2>
+          <p class="section-subtitle">Pegasus AI agents work across your data and applications so every decision informs the next, turning insight into action and action into continuous innovation.</p>
+        </header>
+
+        <div class="functions__grid">
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><path d="M4 20h16M7 16v-5M12 16V7M17 16v-8"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>AI analysis of financial statements</strong>Quarter close in progress</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Cash-flow forecast</strong>Updated just now</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Financial management</h3>
+            <p class="fn-card__text">Close the books faster with Pegasus AI agents that continuously reconcile, forecast and flag risks across planning, treasury and compliance.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Sourcing event &middot; RFP</strong>IT equipment, Europe</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Supplier shortlist ready</strong>3 suppliers recommended</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Spend management</h3>
+            <p class="fn-card__text">Take control of every purchase with agents that refine sourcing, procurement, contracts and payments in real time.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 10h4l4 3v3h-8z"/><circle cx="6" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Shipment scheduled</strong>Dock 4 &middot; 11:30</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Route optimised</strong>Arrives a day earlier</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Supply chain management</h3>
+            <p class="fn-card__text">Keep goods moving with agents that optimise planning, manufacturing, logistics and inventory as conditions change.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14c2.5.2 4.5 2.3 4.5 5"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Create from roles</strong>Select a current or target role</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Create from interests</strong>Match skills to passions</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Human capital management</h3>
+            <p class="fn-card__text">Build a workforce ready for what's next with agents that improve hiring, skills development and workforce planning.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Campaign ideas</strong>3 new ideas for the spring launch</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Service case resolved</strong>Customer notified</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Customer experience</h3>
+            <p class="fn-card__text">Delight customers at every touchpoint with agents that personalise marketing, commerce, sales and service.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Strategy review</strong>Production impact +7%</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Maintenance predicted</strong>Crane 2 &middot; next week</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Industry AI</h3>
+            <p class="fn-card__text">Put AI to work on the processes that matter most in construction, hospitality, defence and beyond.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17l9 5 9-5" opacity="0.6"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Release project billing</strong>Request 1000002416</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Approval routed</strong>Medium priority</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Enterprise resource planning</h3>
+            <p class="fn-card__text">Run your core on Pegasus ERP, with agents that connect data, applications and decisions across every function.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="fn-card">
+            <div class="fn-visual" aria-hidden="true">
+              <div class="fn-screen"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v8l6 5"/></svg></div>
+              <ul class="fn-ui">
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M6 1c.4 2.6 1.9 4.1 4.5 4.5C7.9 5.9 6.4 7.4 6 10c-.4-2.6-1.9-4.1-4.5-4.5C4.1 5.1 5.6 3.6 6 1z"/></svg></span><span><strong>Revenue insights</strong>Top region: EMEA</span></li>
+                  <li><span class="fn-ui__icon"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Anomaly detected</strong>Inventory spike flagged</span></li>
+              </ul>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+              <svg class="fn-star" viewBox="0 0 100 100"><path d="M50 0C54 34 66 46 100 50 66 54 54 66 50 100 46 66 34 54 0 50 34 46 46 34 50 0Z"/></svg>
+            </div>
+            <h3 class="fn-card__title">Data and analytics</h3>
+            <p class="fn-card__text">Turn every data point into a decision with a unified data layer and AI insights built for business users.</p>
+            <a href="#" class="link-arrow">Learn more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 5: Pegasus Muse (ref: docs/section_five.png) ===== -->
+    <section id="section-five" class="section muse">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Meet Pegasus Muse, supercharged for work</h2>
+          <p class="section-subtitle">Inspired by the Muses of Pegasus legend, your AI copilot turns every question into progress.</p>
+        </header>
+
+        <div class="muse__grid">
+          <div class="muse__media">
+            <!-- Animated demo: JS reveals each [data-step] in turn; without JS the final state shows -->
+            <div class="muse-demo" data-muse aria-label="Animated demo: Pegasus Muse finds open returns and drafts an approval" role="img">
+              <div class="muse-screen">
+                <div class="muse-screen__head">
+                  <img src="assets/images/logo-white.png" alt="" width="432" height="111"><span>Muse</span>
+                </div>
+
+                <p class="muse-prompt" data-step="1">Show me open returns for Northwind Cycles</p>
+
+                <div class="muse-thinking" data-step="2" data-until="3"><span></span><span></span><span></span></div>
+
+                <div class="muse-chips" data-step="3">
+                  <span>All</span><span>Completed</span><span class="is-active">Open</span><span>&hellip;</span>
+                </div>
+
+                <ul class="muse-rows">
+                  <li class="muse-row" data-step="4">
+                    <div><strong>Return 13034557</strong><em>Northwind Cycles</em></div>
+                    <small>Document date 13-12-2026 &middot; Standard return</small>
+                    <b>&#8377;1,34,875.60</b><svg class="muse-row__chev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4"/></svg>
+                  </li>
+                  <li class="muse-row muse-row--skeleton" data-step="5">
+                    <div><strong>Return 13034559</strong><i></i></div>
+                    <small><i></i><i></i></small>
+                    <b><i></i></b><svg class="muse-row__chev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4"/></svg>
+                  </li>
+                  <li class="muse-row muse-row--skeleton" data-step="6">
+                    <div><strong>Return 13034558</strong><i></i></div>
+                    <small><i></i><i></i></small>
+                    <b><i></i></b><svg class="muse-row__chev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4"/></svg>
+                  </li>
+                </ul>
+
+                <div class="muse-input">
+                  <span class="muse-input__text" data-step="7">Approve return 13034557 and notify the customer</span>
+                  <span class="muse-input__placeholder">Take action on this space</span>
+                  <div class="muse-input__bar">
+                    <svg viewBox="0 0 16 16"><path d="M8 3v10M3 8h10"/></svg>
+                    <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5"/><circle cx="8" cy="8" r="1.5"/></svg>
+                    <svg class="muse-input__send" viewBox="0 0 16 16"><path d="M2 8.5L14 3l-3.5 11-2.5-4.5z"/></svg>
+                  </div>
+                </div>
+                <p class="muse-note">Muse uses AI. Verify results.</p>
+              </div>
+            </div>
+
+            <button class="muse-toggle" type="button" aria-label="Pause animation" aria-pressed="false">
+              <svg class="muse-toggle__pause" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7M14 8.5v7"/></svg>
+              <svg class="muse-toggle__play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l5.5-3.5z"/></svg>
+            </button>
+          </div>
+
+          <div class="muse__text">
+            <div class="muse-point">
+              <a href="#" class="link-arrow muse-point__title">Turn intent into action <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <p>Whatever you need to know or get done, Muse brings together Pegasus AI agents and insights to make it happen, anywhere you work.</p>
+            </div>
+            <div class="muse-point">
+              <a href="#" class="link-arrow muse-point__title">Get it done with Muse Workspace <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <p>Bring everything together in one adaptive workspace where agents and workflows help you take action and finish work faster.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Pegasus AI Platform (ref: docs/section_two.png) ===== -->
+    <section id="section-two" class="section platform">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Finally, one platform for all your AI</h2>
+          <p class="section-subtitle">The Pegasus AI Platform brings AI to life, with one place to build, contextualise and govern every application and workflow.</p>
+        </header>
+
+        <div class="plat-row">
+          <div class="plat-row__text">
+            <p class="plat-row__eyebrow">Build</p>
+            <h3 class="plat-row__title">Build apps, agents and skills</h3>
+            <p class="plat-row__desc">Turn ideas into enterprise impact with one place to design AI agents, apps and workflows, and deploy them without operational overhead.</p>
+            <ul class="plat-row__links">
+              <li><a href="#" class="link-arrow">Pegasus Daedalus Studio <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+              <li><a href="#" class="link-arrow">Pegasus Iris Integration <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+            </ul>
+          </div>
+          <div class="plat-visual plat-visual--build" aria-hidden="true">
+            <div class="pv-glass pv-toolbar">
+              <svg viewBox="0 0 24 24"><defs><linearGradient id="pv-gem" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b8cff"/><stop offset="1" stop-color="#e24fc9"/></linearGradient></defs><path d="M7 3h10l4 6-9 12L3 9z" fill="url(#pv-gem)"/></svg>
+              <span class="pv-toolbar__spacer"></span>
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5L12 12l8-4.5M12 12v9"/></svg>
+              <span class="pv-toolbar__active"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+            </div>
+            <div class="pv-glass pv-window">
+                <div class="pv-template pv-template--agent">
+                  <span class="pv-template__thumb"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg></span>
+                  <span class="pv-template__label">Agent</span>
+                  <span class="pv-line"></span><span class="pv-line pv-line--short"></span>
+                  <span class="pv-pill">Create</span>
+                </div>
+                <div class="pv-template pv-template--flow">
+                  <span class="pv-template__thumb"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8M16 7.5l-3 8"/></svg></span>
+                  <span class="pv-template__label">Workflow</span>
+                  <span class="pv-line"></span><span class="pv-line pv-line--short"></span>
+                  <span class="pv-pill">Create</span>
+                </div>
+                <div class="pv-template pv-template--app">
+                  <span class="pv-template__thumb"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 9h16"/></svg></span>
+                  <span class="pv-template__label">Application</span>
+                  <span class="pv-line"></span><span class="pv-line pv-line--short"></span>
+                  <span class="pv-pill">Create</span>
+                </div>
+                <div class="pv-template pv-template--ext">
+                  <span class="pv-template__thumb"><svg viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v4a6 6 0 0 1-12 0zM12 18v3"/></svg></span>
+                  <span class="pv-template__label">Extension</span>
+                  <span class="pv-line"></span><span class="pv-line pv-line--short"></span>
+                  <span class="pv-pill">Create</span>
+                </div>
+            </div>
+            <span class="pv-connector"></span>
+            <div class="pv-code">
+              <span class="pv-code__glyph">&lt;/&gt;</span>
+              <div class="pv-code__row"><span style="--x: 0%; --w: 10%"></span><span style="--x: 14%; --w: 72%"></span></div>
+              <div class="pv-code__row"><span style="--x: 0%; --w: 22%"></span><span style="--x: 26%; --w: 60%"></span></div>
+              <div class="pv-code__row"><span style="--x: 0%; --w: 16%"></span><span style="--x: 20%; --w: 76%"></span></div>
+              <div class="pv-code__row"><span style="--x: 20%; --w: 58%"></span></div>
+              <div class="pv-code__row"><span style="--x: 20%; --w: 40%"></span></div>
+              <div class="pv-code__row"><span style="--x: 0%; --w: 16%"></span><span style="--x: 20%; --w: 52%"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="plat-row">
+          <div class="plat-row__text">
+            <p class="plat-row__eyebrow">Contextualise and reason</p>
+            <h3 class="plat-row__title">Contextualise with your data and leading models</h3>
+            <p class="plat-row__desc">Ground every agent, model and application in your complete business context, so it performs reliably from day one.</p>
+            <ul class="plat-row__links">
+              <li><a href="#" class="link-arrow">Pegasus Gaia Data Cloud <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+              <li><a href="#" class="link-arrow">Pegasus Metis Knowledge Graph <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+              <li><a href="#" class="link-arrow">Pegasus Delphi AI Models <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+            </ul>
+          </div>
+          <div class="plat-visual plat-visual--context" aria-hidden="true">
+            <svg class="pv-rays" viewBox="0 0 160 90" preserveAspectRatio="none">
+              <path d="M80 22 C80 40 80 50 80 62"/>
+              <path d="M20 25 C35 45 60 55 72 62"/>
+              <path d="M36 12 C45 35 65 50 76 62"/>
+              <path d="M125 12 C115 35 95 50 84 62"/>
+              <path d="M142 26 C125 45 100 55 88 62"/>
+              <path d="M0 40 C30 50 55 58 70 63"/>
+              <path d="M160 38 C130 50 105 58 90 63"/>
+            </svg>
+            <div class="pv-glass pv-hub"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5L12 12l8-4.5M12 12v9"/></svg></div>
+            <div class="pv-glass pv-node" style="--nx: 10%; --ny: 18%"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div>
+            <div class="pv-glass pv-node" style="--nx: 20%; --ny: 4%"><svg viewBox="0 0 24 24"><path d="M5 20V10M10 20V4M15 20v-7M20 20V8"/></svg></div>
+            <div class="pv-glass pv-node" style="--nx: 76%; --ny: 4%"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7"/></svg></div>
+            <div class="pv-glass pv-node" style="--nx: 86%; --ny: 20%"><svg viewBox="0 0 24 24"><path d="M5 20V10M10 20V4M15 20v-7M20 20V8"/></svg></div>
+            <div class="pv-glass pv-dash">
+              <div class="pv-dash__bar"><span></span><span></span><span></span></div>
+              <p class="pv-dash__title">Intelligent context</p>
+              <span class="pv-dash__search"></span>
+              <div class="pv-dash__thumbs"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="plat-row">
+          <div class="plat-row__text">
+            <p class="plat-row__eyebrow">Govern</p>
+            <h3 class="plat-row__title">Govern every agent with confidence</h3>
+            <p class="plat-row__desc">Set policies once and apply them everywhere, with approvals, audit trails and monitoring that keep AI safe, compliant and accountable.</p>
+            <ul class="plat-row__links">
+              <li><a href="#" class="link-arrow">Pegasus Themis AI Governance <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+              <li><a href="#" class="link-arrow">Pegasus Kairos Transformation <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+            </ul>
+          </div>
+          <div class="plat-visual plat-visual--govern" aria-hidden="true">
+            <div class="pv-glass pv-policies">
+              <p class="pv-policies__title">Themis &middot; AI policies</p>
+              <ul>
+                <li>Mask personal data<span class="pv-toggle"></span></li>
+                <li>Human approval for payments<span class="pv-toggle"></span></li>
+                <li>Model drift alerts<span class="pv-toggle"></span></li>
+                <li>Log every agent action<span class="pv-toggle"></span></li>
+                <li>Allow external models<span class="pv-toggle is-off"></span></li>
+              </ul>
+            </div>
+            <div class="pv-guard">
+              <svg viewBox="0 0 24 24"><defs><linearGradient id="pv-shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b8cff"/><stop offset="1" stop-color="#e24fc9"/></linearGradient></defs><path d="M12 2.5l8.5 3.2v6.4c0 5.2-3.7 8.6-8.5 9.9-4.8-1.3-8.5-4.7-8.5-9.9V5.7z" fill="none" stroke="url(#pv-shield)" stroke-width="1.2"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="pv-chip"><span class="svc-dot"></span>All agents compliant</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (ref: docs/footer.png) ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Pegasus home">
+          <img src="assets/images/logo.png" alt="Pegasus" width="432" height="111">
+        </a>
+
+        <ul class="footer__contact">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg>
+            <a href="#">Chat with a Pegasus expert</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
+            <div>
+              <span class="footer__label">Phone</span>
+              <p class="footer__phone"><a href="tel:+917314745928">+91 0731 474 5928</a></p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <div>
+              <span class="footer__label">Email</span>
+              <a href="mailto:connect@mypegasus.in" class="footer__value">connect@mypegasus.in</a>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div>
+              <span class="footer__label">Office</span>
+              <address class="footer__value">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Awfis+Winway+Vijay+Nagar+Scheme+No+54+Indore+452010" target="_blank" rel="noopener">
+                  Awfis Winway, 7, Vijay Nagar, Scheme No 54,<br>Indore, Madhya Pradesh 452010
+                </a>
+              </address>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+        <nav class="footer__col" aria-label="Quick links">
+          <h2 class="footer__heading">Quick links</h2>
+          <ul>
+            <li><a href="#">Trust Center</a></li>
+            <li><a href="#">Pegasus Store</a></li>
+            <li><a href="#">Technology platform</a></li>
+            <li><a href="#">Industries</a></li>
+            <li><a href="#">Find a partner</a></li>
+            <li><a href="#">Trials and demos</a></li>
+            <li><a href="#">Find services</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Trending">
+          <h2 class="footer__heading">Trending</h2>
+          <ul>
+            <li><a href="#">Pegasus AI Platform</a></li>
+            <li><a href="construction.html">Pegasus Atlas</a></li>
+            <li><a href="smarthomes.html">Pegasus SmartHomes</a></li>
+            <li><a href="#">Pegasus Aegis</a></li>
+            <li><a href="#">Pegasus Odyssey</a></li>
+            <li><a href="#">Pegasus Argus</a></li>
+            <li><a href="#">Industry AI</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="About Pegasus">
+          <h2 class="footer__heading">About Pegasus</h2>
+          <ul>
+            <li><a href="#">Company information</a></li>
+            <li><a href="#">Worldwide directory</a></li>
+            <li><a href="#">Investor relations</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News and press</a></li>
+            <li><a href="#">Blogs and resources</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Customer stories</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Site information">
+          <h2 class="footer__heading">Site information</h2>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Legal disclosure</a></li>
+            <li><a href="#">Copyright</a></li>
+            <li><a href="#">Trademark</a></li>
+            <li><a href="#">Cookie statement</a></li>
+            <li><a href="#">Cookie preferences</a></li>
+          </ul>
+        </nav>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Pegasus. All rights reserved.</p>
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Pegasus on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 9.5v8M6.5 6.5v.01M10.5 17.5v-4.5a3 3 0 0 1 6 0v4.5M10.5 9.5v8" /></svg></a></li>
+          <li><a href="#" aria-label="Pegasus on X"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></a></li>
+          <li><a href="#" aria-label="Pegasus on YouTube"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></a></li>
+          <li><a href="mailto:connect@mypegasus.in" aria-label="Email Pegasus"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+        </ul>
+      </div>
+
+      <a href="#" class="footer__top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14M12 20V9M7 13l5-5 5 5"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating contact button -->
+  <a href="#" class="contact-fab">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v9H8l-4 3.5z"/><path d="M19 9h1v9l-3-2.5h-6v-1.5"/></svg>
+    <span>Contact us</span>
+  </a>
+
+</body>
+</html>
