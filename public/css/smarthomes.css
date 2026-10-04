@@ -1,16 +1,17 @@
 /* ==========================================================================
-   Pegasus SmartHomes — dark luxury theme (smarthomes.html)
+   Pegasus SmartHomes — dark theme in the logo's palette (smarthomes.html)
    Loaded after styles.css; everything is scoped to .theme-dark / .lx-*
    ========================================================================== */
 
 .theme-dark {
-  --lx-bg: #0b0b0c;
-  --lx-bg-2: #111113;
-  --lx-text: #f3efe7;
-  --lx-muted: #a8a39a;
-  --lx-line: rgba(243, 239, 231, 0.12);
-  --lx-gold: #c9b48a;
-  --lx-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --lx-bg: #08080c;
+  --lx-bg-2: #0e0e15;
+  --lx-text: #f4f5fb;
+  --lx-muted: #9fa3b8;
+  --lx-line: rgba(244, 245, 251, 0.12);
+  --lx-accent: #a48bff;
+  --lx-grad: linear-gradient(90deg, #5c60fe 0%, #9f54f4 50%, #f241b3 100%);
+  --lx-display: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --lx-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
@@ -21,7 +22,7 @@ body.theme-dark {
 
 /* ---------- Dark navbar ---------- */
 .theme-dark .navbar {
-  background: rgba(11, 11, 12, 0.78);
+  background: rgba(8, 8, 12, 0.78);
   backdrop-filter: saturate(140%) blur(14px);
   border-bottom: 1px solid var(--lx-line);
 }
@@ -32,15 +33,15 @@ body.theme-dark {
 
 .theme-dark .nav-link:hover,
 .theme-dark .nav-item.is-open .nav-link {
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 .theme-dark .nav-link::after {
-  background: var(--lx-gold);
+  background: var(--lx-accent);
 }
 
 .theme-dark .mega {
-  background: #121214;
+  background: #11111a;
   border: 1px solid var(--lx-line);
   border-top: 0;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
@@ -53,7 +54,7 @@ body.theme-dark {
 
 .theme-dark a.mega__heading:hover,
 .theme-dark .mega__list a:hover {
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 .theme-dark .mega__list a {
@@ -61,7 +62,7 @@ body.theme-dark {
 }
 
 .theme-dark .mega__label {
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 .theme-dark .navbar__toggle span {
@@ -70,7 +71,7 @@ body.theme-dark {
 
 /* ---------- Dark footer ---------- */
 .theme-dark .footer {
-  background: #080809;
+  background: #06060a;
   color: var(--lx-muted);
   border-top: 1px solid var(--lx-line);
 }
@@ -82,7 +83,7 @@ body.theme-dark {
 }
 
 .theme-dark .footer a:hover {
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 .theme-dark .footer__label,
@@ -91,34 +92,39 @@ body.theme-dark {
 }
 
 .theme-dark .footer__social a {
-  background: #161618;
+  background: #15151d;
   color: var(--lx-text);
   box-shadow: none;
   border: 1px solid var(--lx-line);
 }
 
 .theme-dark .footer__social a:hover {
-  background: var(--lx-gold);
-  color: #0b0b0c;
+  background: var(--lx-accent);
+  color: #08080c;
 }
 
 .theme-dark .footer__top {
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 .theme-dark .contact-fab {
   background: var(--lx-text);
-  color: #0b0b0c;
+  color: #08080c;
 }
 
 .theme-dark .contact-fab:hover {
-  box-shadow: 0 8px 28px rgba(201, 180, 138, 0.45), 0 0 0 2px var(--lx-gold);
+  box-shadow: 0 8px 28px rgba(164, 139, 255, 0.45), 0 0 0 2px var(--lx-accent);
 }
 
 /* ---------- Typography & shared pieces ---------- */
 .lx em {
-  font-style: italic;
-  color: var(--lx-gold);
+  font-style: normal;
+  background: var(--lx-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .lx-eyebrow {
@@ -126,12 +132,12 @@ body.theme-dark {
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 .lx-title {
   margin-top: 18px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(2.5rem, 4.5vw, 4.25rem);
   font-weight: 300;
   line-height: 1.02;
@@ -170,7 +176,7 @@ body.theme-dark {
   display: inline-flex;
   align-items: center;
   padding: 16px 30px;
-  border: 1px solid rgba(243, 239, 231, 0.45);
+  border: 1px solid rgba(244, 245, 251, 0.45);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -181,24 +187,25 @@ body.theme-dark {
 
 .lx-btn:hover {
   border-color: var(--lx-text);
-  background: rgba(243, 239, 231, 0.06);
+  background: rgba(244, 245, 251, 0.06);
 }
 
 .lx-btn--solid {
   background: var(--lx-text);
   border-color: var(--lx-text);
-  color: #0b0b0c;
+  color: #08080c;
 }
 
 .lx-btn--solid:hover {
-  background: var(--lx-gold);
-  border-color: var(--lx-gold);
+  background: var(--lx-grad);
+  border-color: transparent;
+  color: #fff;
 }
 
 .lx-btn:focus-visible,
 .lx-scene:focus-visible,
 .lx-scroll:focus-visible {
-  outline: 1px solid var(--lx-gold);
+  outline: 1px solid var(--lx-accent);
   outline-offset: 4px;
 }
 
@@ -233,7 +240,7 @@ body.theme-dark {
   flex-shrink: 0;
   width: 18px;
   height: 1px;
-  background: var(--lx-gold);
+  background: var(--lx-accent);
 }
 
 .lx-specs--inline {
@@ -276,8 +283,8 @@ body.theme-dark {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(to top, var(--lx-bg) 2%, rgba(11, 11, 12, 0.55) 42%, rgba(11, 11, 12, 0.2) 72%, rgba(11, 11, 12, 0.55) 100%),
-    radial-gradient(ellipse at 15% 85%, rgba(11, 11, 12, 0.65), transparent 60%);
+    linear-gradient(to top, var(--lx-bg) 2%, rgba(8, 8, 12, 0.55) 42%, rgba(8, 8, 12, 0.2) 72%, rgba(8, 8, 12, 0.55) 100%),
+    radial-gradient(ellipse at 15% 85%, rgba(8, 8, 12, 0.65), transparent 60%);
 }
 
 @keyframes lx-zoom {
@@ -295,7 +302,7 @@ body.theme-dark {
 }
 
 .lx-hero__title {
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(3.25rem, 8vw, 7.5rem);
   font-weight: 300;
   line-height: 0.95;
@@ -307,7 +314,7 @@ body.theme-dark {
   margin-top: 28px;
   font-size: 1.125rem;
   line-height: 1.7;
-  color: rgba(243, 239, 231, 0.82);
+  color: rgba(244, 245, 251, 0.82);
 }
 
 .lx-scroll {
@@ -339,7 +346,7 @@ body.theme-dark {
   left: 0;
   width: 1px;
   height: 24px;
-  background: var(--lx-gold);
+  background: var(--lx-accent);
   animation: lx-scroll 2.4s var(--lx-ease) infinite;
 }
 
@@ -356,7 +363,7 @@ body.theme-dark {
 .lx-statement {
   max-width: 1000px;
   margin: 28px auto 0;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(1.9rem, 3.6vw, 3.25rem);
   font-weight: 300;
   line-height: 1.25;
@@ -381,15 +388,15 @@ body.theme-dark {
 }
 
 .lx-pillar__num {
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 1.25rem;
-  font-style: italic;
-  color: var(--lx-gold);
+  font-weight: 300;
+  color: var(--lx-accent);
 }
 
 .lx-pillar h3 {
   margin-top: 12px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 2.125rem;
   font-weight: 400;
 }
@@ -433,7 +440,7 @@ body.theme-dark {
   content: "";
   position: absolute;
   inset: 18px;
-  border: 1px solid rgba(201, 180, 138, 0.4);
+  border: 1px solid rgba(164, 139, 255, 0.4);
   pointer-events: none;
 }
 
@@ -448,17 +455,17 @@ body.theme-dark {
 .lx-moment__num {
   display: block;
   margin-bottom: 20px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(5rem, 9vw, 8rem);
   font-weight: 300;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(201, 180, 138, 0.6);
+  -webkit-text-stroke: 1px rgba(164, 139, 255, 0.6);
 }
 
 .lx-moment__title {
   margin-top: 16px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 400;
   line-height: 1.1;
@@ -495,7 +502,7 @@ body.theme-dark {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, #2f63f5, #8b5cf6, #e24fc9);
+  background: var(--lx-grad);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.7s var(--lx-ease);
@@ -513,7 +520,7 @@ body.theme-dark {
   width: 32px;
   height: 32px;
   fill: none;
-  stroke: var(--lx-gold);
+  stroke: var(--lx-accent);
   stroke-width: 1.1;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -521,7 +528,7 @@ body.theme-dark {
 
 .lx-sensor h3 {
   margin-top: 36px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -556,7 +563,7 @@ body.theme-dark {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, var(--lx-bg), rgba(11, 11, 12, 0.5) 30%, rgba(11, 11, 12, 0.55) 70%, var(--lx-bg));
+  background: linear-gradient(to bottom, var(--lx-bg), rgba(8, 8, 12, 0.5) 30%, rgba(8, 8, 12, 0.55) 70%, var(--lx-bg));
 }
 
 .lx-tiers {
@@ -567,14 +574,14 @@ body.theme-dark {
 
 .lx-tier {
   padding: 36px 32px 40px;
-  border: 1px solid rgba(243, 239, 231, 0.18);
-  background: rgba(11, 11, 12, 0.5);
+  border: 1px solid rgba(244, 245, 251, 0.18);
+  background: rgba(8, 8, 12, 0.5);
   backdrop-filter: blur(12px);
 }
 
 .lx-tier h3 {
   margin-top: 18px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 2.125rem;
   font-weight: 400;
 }
@@ -582,7 +589,7 @@ body.theme-dark {
 .lx-tier p:last-child {
   margin-top: 14px;
   line-height: 1.75;
-  color: rgba(243, 239, 231, 0.75);
+  color: rgba(244, 245, 251, 0.75);
 }
 
 /* ---------- Scene controller ---------- */
@@ -607,17 +614,17 @@ body.theme-dark {
 
 .lx-hint {
   margin-top: 28px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 1.25rem;
-  font-style: italic;
-  color: var(--lx-gold);
+  font-weight: 300;
+  color: var(--lx-accent);
 }
 
 .lx-panel {
   position: relative;
   padding: 36px;
   overflow: hidden;
-  border: 1px solid rgba(243, 239, 231, 0.14);
+  border: 1px solid rgba(244, 245, 251, 0.14);
   border-radius: 28px;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015));
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
@@ -631,7 +638,7 @@ body.theme-dark {
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 190, 120, 0.55), rgba(226, 79, 201, 0.16) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(92, 96, 254, 0.5), rgba(242, 65, 179, 0.18) 45%, transparent 70%);
   opacity: var(--glow, 0.9);
   filter: blur(10px);
   pointer-events: none;
@@ -647,7 +654,7 @@ body.theme-dark {
 
 .lx-panel__guest {
   margin-top: 8px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 2.125rem;
   font-weight: 300;
 }
@@ -691,13 +698,13 @@ body.theme-dark {
 }
 
 .lx-scene:hover {
-  border-color: var(--lx-gold);
+  border-color: var(--lx-accent);
 }
 
 .lx-scene.is-active {
   background: var(--lx-text);
   border-color: var(--lx-text);
-  color: #0b0b0c;
+  color: #08080c;
 }
 
 .lx-panel__grid {
@@ -714,7 +721,7 @@ body.theme-dark {
 
 .lx-panel__grid > div {
   padding: 20px 22px;
-  background: rgba(11, 11, 12, 0.72);
+  background: rgba(8, 8, 12, 0.72);
 }
 
 .lx-panel__grid dt {
@@ -726,7 +733,7 @@ body.theme-dark {
 
 .lx-panel__grid dd {
   margin-top: 6px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 1.625rem;
   transition: opacity 0.3s ease;
 }
@@ -766,7 +773,7 @@ body.theme-dark {
   justify-content: center;
   gap: 12px 22px;
   margin-top: 20px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(1.25rem, 2vw, 1.75rem);
 }
 
@@ -774,7 +781,7 @@ body.theme-dark {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--lx-gold);
+  background: var(--lx-accent);
 }
 
 /* ---------- Close ---------- */
@@ -800,12 +807,12 @@ body.theme-dark {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(var(--lx-bg), rgba(11, 11, 12, 0.55) 35%, rgba(11, 11, 12, 0.8));
+  background: linear-gradient(var(--lx-bg), rgba(8, 8, 12, 0.55) 35%, rgba(8, 8, 12, 0.8));
 }
 
 .lx-close__title {
   margin-top: 20px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(2.75rem, 6vw, 5.5rem);
   font-weight: 300;
   line-height: 1;
@@ -815,7 +822,7 @@ body.theme-dark {
   max-width: 560px;
   margin: 28px auto 0;
   line-height: 1.75;
-  color: rgba(243, 239, 231, 0.8);
+  color: rgba(244, 245, 251, 0.8);
 }
 
 .lx-close__contact {
@@ -834,12 +841,12 @@ body.theme-dark {
 }
 
 .lx-close__contact a:hover {
-  color: var(--lx-gold);
+  color: var(--lx-accent);
 }
 
 /* ---------- How it works (glowing wave journey) ---------- */
 .theme-dark {
-  --lx-violet: #8b5cf6;
+  --lx-violet: #9f54f4;
 }
 
 .lx-how__track {
@@ -900,9 +907,9 @@ body.theme-dark {
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  border: 1px solid rgba(139, 92, 246, 0.7);
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.25), rgba(11, 11, 12, 0.9) 70%);
-  box-shadow: 0 0 28px rgba(139, 92, 246, 0.45), inset 0 0 18px rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(159, 84, 244, 0.7);
+  background: radial-gradient(circle, rgba(159, 84, 244, 0.25), rgba(8, 8, 12, 0.9) 70%);
+  box-shadow: 0 0 28px rgba(159, 84, 244, 0.45), inset 0 0 18px rgba(159, 84, 244, 0.25);
 }
 
 .lx-step__ring svg {
@@ -918,14 +925,14 @@ body.theme-dark {
 .lx-step__num {
   display: block;
   margin-top: 28px;
-  font-family: var(--lx-serif);
-  font-style: italic;
-  color: var(--lx-gold);
+  font-family: var(--lx-display);
+  font-weight: 300;
+  color: var(--lx-accent);
 }
 
 .lx-step h3 {
   margin-top: 6px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.15;
@@ -988,7 +995,7 @@ body.theme-dark {
 
 .lx-product__title {
   margin-top: 18px;
-  font-family: var(--lx-serif);
+  font-family: var(--lx-display);
   font-size: clamp(2.125rem, 3.2vw, 3rem);
   font-weight: 300;
   line-height: 1.05;
@@ -1043,13 +1050,13 @@ body.theme-dark {
   padding: 12px;
   border-radius: 46px;
   background: linear-gradient(160deg, #2a2a2f, #0e0e10);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 90px rgba(0, 0, 0, 0.7), 0 0 120px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 90px rgba(0, 0, 0, 0.7), 0 0 120px rgba(159, 84, 244, 0.35);
 }
 
 .lx-app__screen {
   padding: 16px 16px 24px;
   border-radius: 36px;
-  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.28), transparent 55%), #0b0b0e;
+  background: radial-gradient(circle at 50% 0%, rgba(159, 84, 244, 0.28), transparent 55%), #08080c;
 }
 
 .lx-app__bar {
@@ -1119,12 +1126,12 @@ body.theme-dark {
   height: 26px;
   margin-bottom: 14px;
   border-radius: 50%;
-  background: #26262d;
+  background: #24243a;
 }
 
 .lx-app__tile.is-on i {
-  background: radial-gradient(circle, #ffd89a 20%, #f0a93b 60%, transparent 62%);
-  box-shadow: 0 0 16px rgba(240, 169, 59, 0.6);
+  background: radial-gradient(circle, #e6dcff 20%, #9f54f4 60%, transparent 62%);
+  box-shadow: 0 0 16px rgba(159, 84, 244, 0.6);
 }
 
 .lx-app__tile strong {
@@ -1158,8 +1165,8 @@ body.theme-dark {
   height: 42px;
   padding: 10px;
   border-radius: 50%;
-  border: 1px solid rgba(139, 92, 246, 0.6);
-  box-shadow: 0 0 16px rgba(139, 92, 246, 0.35);
+  border: 1px solid rgba(159, 84, 244, 0.6);
+  box-shadow: 0 0 16px rgba(159, 84, 244, 0.35);
   fill: none;
   stroke: #d8ccff;
   stroke-width: 1.4;
@@ -1214,7 +1221,7 @@ body.theme-dark {
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .theme-dark .navbar__nav {
-    background: #121214;
+    background: #11111a;
     border-top-color: var(--lx-line);
   }
 

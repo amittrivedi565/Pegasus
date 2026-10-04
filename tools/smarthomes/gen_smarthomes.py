@@ -462,7 +462,7 @@ def main():
     head_nav = head_nav.replace('<meta name="theme-color" content="#000000">', '<meta name="theme-color" content="#0b0b0c">')
     fonts = ('  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
              '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-             '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">\n')
+             '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap">\n')
     head_nav = head_nav.replace('  <link rel="stylesheet" href="css/styles.css">\n',
                                 fonts + '  <link rel="stylesheet" href="css/styles.css">\n  <link rel="stylesheet" href="css/smarthomes.css">\n')
     head_nav = re.sub(r"<body[^>]*>", '<body id="top" class="theme-dark">', head_nav, count=1)
