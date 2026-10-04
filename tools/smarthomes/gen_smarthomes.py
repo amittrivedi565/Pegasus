@@ -230,7 +230,7 @@ def app_section():
         <div class="lx-app__phone lx-reveal" aria-hidden="true">
           <div class="lx-app__screen">
             <div class="lx-app__bar"><span>21:45</span><span class="lx-app__notch"></span><span>5G</span></div>
-            <img class="lx-app__logo" src="assets/images/smarthomes-logo.png" alt="" width="729" height="118">
+            <img class="lx-app__logo" src="assets/images/pegasus-smarthomes-logo.png" alt="" width="1200" height="218">
             <div class="lx-app__tabs"><span class="is-active">Home</span><span>Rooms</span><span>Scenes</span></div>
             <div class="lx-app__grid">{tiles}</div>
           </div>
@@ -307,7 +307,7 @@ def build():
       <!-- Photo: Bobby / Unsplash (unsplash.com/license) -->
       <img class="lx-hero__bg" src="assets/images/smarthomes/hero.jpg" alt="" width="2000" height="1125">
       <div class="container lx-hero__inner">
-        <img class="lx-hero__logo" src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
+        <img class="lx-hero__logo" src="assets/images/pegasus-smarthomes-logo.png" alt="Pegasus SmartHomes" width="1200" height="218">
         <h1 class="lx-hero__title">The art of the<br><em>intelligent building.</em></h1>
         <p class="lx-hero__text">Automation for every sensor, IoT device and building system, across homes, hotels and entire properties, from a single room to an entire skyline.</p>
         <div class="lx-actions">
@@ -469,7 +469,7 @@ def main():
     # dark navbar: white logo
     head_nav = re.sub(r'<a href="index.html" class="navbar__logo" aria-label="Pegasus home">\s*<img[^>]*>',
                       f'<a href="{SUBDOMAIN}" class="navbar__logo navbar__logo--smarthomes" aria-label="Pegasus SmartHomes home">\n'
-                      '        <img src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">',
+                      '        <img src="assets/images/pegasus-smarthomes-logo.png" alt="Pegasus SmartHomes" width="1200" height="218">',
                       head_nav)
     tail = re.sub(r'(class="footer__logo"[^>]*>\s*<img src="assets/images/)logo\.png', r'\1logo-white.png', tail)
     tail = tail.replace('<a href="#" class="footer__top"', '<a href="#top" class="footer__top"')

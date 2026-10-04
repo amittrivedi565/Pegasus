@@ -155,7 +155,7 @@ SMARTHOMES_SECTION = f"""    <!-- ===== Pegasus SmartHomes (hospitality automati
       <div class="container">
         <div class="sh__panel">
           <div class="sh__content">
-            <img class="sh__logo" src="assets/images/smarthomes-logo.png" alt="Pegasus SmartHomes" width="729" height="118">
+            <img class="sh__logo" src="assets/images/pegasus-smarthomes-logo.png" alt="Pegasus SmartHomes" width="1200" height="218">
             <h2 class="sh__title">Every sensor, one intelligent building</h2>
             <p class="sh__lead">Pegasus SmartHomes is hospitality automation that elevates every guest experience, from full room automation to large-scale enterprise buildings.</p>
             <ul class="sh__features">
