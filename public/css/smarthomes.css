@@ -1249,6 +1249,200 @@ body.theme-dark {
   color: var(--lx-muted);
 }
 
+/* ---------- Pegasus TV ---------- */
+.lx-tvsec {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 104px);
+}
+
+.lx-tv {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+/* screen contents scale with the screen width (cqw), like a real display */
+.lx-tv__screen {
+  container-type: inline-size;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 10px solid #15151d;
+  border-radius: 10px;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(92, 96, 254, 0.45), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(242, 65, 179, 0.3), transparent 50%),
+    radial-gradient(ellipse at 40% 110%, rgba(159, 84, 244, 0.35), transparent 55%),
+    #08080c;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 90px rgba(0, 0, 0, 0.7), 0 0 140px rgba(159, 84, 244, 0.3);
+}
+
+.lx-tv__stand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 34%;
+  height: 28px;
+  transform: translateX(-50%);
+  background: linear-gradient(#1c1c26, #0e0e15);
+  clip-path: polygon(44% 0, 56% 0, 60% 70%, 100% 70%, 100% 100%, 0 100%, 0 70%, 40% 70%);
+}
+
+.lx-tv__bar {
+  position: absolute;
+  top: 4.5cqw;
+  left: 5cqw;
+  right: 5cqw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.8cqw;
+  color: var(--lx-muted);
+}
+
+.lx-tv__bar img {
+  width: auto;
+  height: 3cqw;
+}
+
+.lx-tv__hello {
+  position: absolute;
+  top: 13cqw;
+  left: 5cqw;
+  font-family: var(--lx-display);
+  font-size: 4.4cqw;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--lx-text);
+}
+
+.lx-tv__hello span {
+  display: block;
+  margin-top: 0.8cqw;
+  font-family: inherit;
+  font-size: 1.7cqw;
+  font-weight: 400;
+  color: var(--lx-muted);
+}
+
+.lx-tv__apps {
+  position: absolute;
+  left: 5cqw;
+  bottom: 5cqw;
+  display: grid;
+  grid-template-columns: repeat(2, 13cqw);
+  gap: 1.4cqw;
+}
+
+.lx-tv__apps span {
+  display: flex;
+  align-items: flex-end;
+  height: 8cqw;
+  padding: 1.2cqw;
+  border: 1px solid rgba(244, 245, 251, 0.1);
+  border-radius: 1.2cqw;
+  background: rgba(244, 245, 251, 0.05);
+  font-size: 1.5cqw;
+  color: var(--lx-text);
+}
+
+.lx-tv__apps span:first-child {
+  border-color: transparent;
+  background: var(--lx-grad);
+}
+
+/* frosted smart-home panel */
+.lx-tv__home {
+  position: absolute;
+  right: 5cqw;
+  bottom: 5cqw;
+  width: 46cqw;
+  padding: 2cqw;
+  border: 1px solid rgba(244, 245, 251, 0.12);
+  border-radius: 1.8cqw;
+  background: rgba(20, 20, 30, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.lx-tv__home > p {
+  margin-bottom: 1.4cqw;
+  font-size: 1.5cqw;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--lx-accent);
+}
+
+.lx-tv__tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2cqw;
+}
+
+.lx-tv__tile {
+  padding: 1.4cqw;
+  border-radius: 1.2cqw;
+  background: rgba(244, 245, 251, 0.05);
+}
+
+.lx-tv__tile i {
+  display: block;
+  width: 2cqw;
+  height: 2cqw;
+  margin-bottom: 1cqw;
+  border-radius: 50%;
+  background: #24243a;
+}
+
+.lx-tv__tile.is-on i {
+  background: radial-gradient(circle, #e6dcff 20%, #9f54f4 60%, transparent 62%);
+  box-shadow: 0 0 1.4cqw rgba(159, 84, 244, 0.6);
+}
+
+.lx-tv__tile strong {
+  display: block;
+  font-size: 1.6cqw;
+  font-weight: 500;
+  color: var(--lx-text);
+}
+
+.lx-tv__tile span {
+  font-size: 1.35cqw;
+  color: var(--lx-muted);
+}
+
+.lx-tv__status {
+  display: flex;
+  align-items: center;
+  gap: 2cqw;
+}
+
+.lx-tv__toast {
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  padding: 1cqw 1.8cqw;
+  border: 1px solid rgba(244, 245, 251, 0.12);
+  border-radius: 99px;
+  background: rgba(20, 20, 30, 0.6);
+  font-size: 1.45cqw;
+  color: var(--lx-text);
+}
+
+.lx-tv__toast i {
+  width: 1cqw;
+  height: 1cqw;
+  border-radius: 50%;
+  background: #3ddc97;
+  box-shadow: 0 0 1cqw #3ddc97;
+}
+
+@media (max-width: 1024px) {
+  .lx-tvsec {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Scroll reveal (enabled by JS; content is visible without it) ---------- */
 .lx-anim .lx-reveal {
   opacity: 0;

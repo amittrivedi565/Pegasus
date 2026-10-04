@@ -75,7 +75,7 @@ SCALE = [
    "Hotels, residences and commercial towers across cities, with central monitoring, energy optimisation and round-the-clock support from our team."),
 ]
 
-CONNECT = ["Pegasus Opera", "IoT devices", "Property management", "Point of sale", "Building management", "Energy systems", "Voice assistants"]
+CONNECT = ["Pegasus Opera", "IoT devices", "Property management", "Point of sale", "Building management", "Energy systems", "Pegasus TV", "Voice assistants"]
 
 # Scene controller values: scene -> (lights, climate, curtains, music, glow 0-1)
 SCENES = {
@@ -249,6 +249,54 @@ def app_section():
 
 """
 
+# ---------------------------------------------------------------- Pegasus TV
+TV_APPS = ["Live TV", "Apps", "Music", "Photos"]
+TV_TILES = [("Lights", "Warm &middot; 70%", True), ("Climate", "23&deg;C", True), ("Curtains", "Closed", False), ("Front door", "Locked", True)]
+TV_FEATS = [
+  ("Pegasus smart OS, built on Android", '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>'),
+  ("Every IoT device on the big screen", '<circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/>'),
+  ("Scenes and controls from the remote", '<rect x="8" y="2.5" width="8" height="19" rx="4"/><circle cx="12" cy="8" r="1.6"/><path d="M10.5 13h3M10.5 16h3"/>'),
+  ("Live alerts from every sensor", '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>'),
+]
+
+def tv_section():
+    apps = "".join(f"<span>{a}</span>" for a in TV_APPS)
+    tiles = "".join(f'<div class="lx-tv__tile{" is-on" if on else ""}"><i></i><strong>{t}</strong><span>{v}</span></div>'
+                    for t, v, on in TV_TILES)
+    feats = "\n".join(f"            <li>{icon(p)}<span>{t}</span></li>" for t, p in TV_FEATS)
+    return f"""    <!-- ===== Pegasus TV ===== -->
+    <section class="lx-section lx-section--alt">
+      <div class="container lx-tvsec">
+        <div class="lx-tvsec__text lx-reveal">
+          <p class="lx-eyebrow">Pegasus TV</p>
+          <h2 class="lx-title">The screen that<br><em>runs the room.</em></h2>
+          <p class="lx-control__body">Pegasus-branded smart TVs run Pegasus, our smart OS built on Android and integrated with every SmartHomes device. Watch your favourite apps, then dim the lights, set the temperature or close the curtains without leaving the sofa.</p>
+          <ul class="lx-app__feats">
+{feats}
+          </ul>
+        </div>
+
+        <!-- Illustrative Pegasus OS home screen -->
+        <div class="lx-tv lx-reveal" aria-hidden="true">
+          <div class="lx-tv__screen">
+            <div class="lx-tv__bar">
+              <img src="assets/images/pegasus-tv-logo.png" alt="" width="428" height="107">
+              <span class="lx-tv__status"><span class="lx-tv__toast"><i></i>Motion detected &middot; Lobby</span>21:45</span>
+            </div>
+            <p class="lx-tv__hello">Good evening<span>Living room &middot; 23&deg;C</span></p>
+            <div class="lx-tv__apps">{apps}</div>
+            <div class="lx-tv__home">
+              <p>Smart home</p>
+              <div class="lx-tv__tiles">{tiles}</div>
+            </div>
+          </div>
+          <span class="lx-tv__stand"></span>
+        </div>
+      </div>
+    </section>
+
+"""
+
 def build():
     pillars = "\n".join(f'''          <div class="lx-pillar lx-reveal">
             <span class="lx-pillar__num">{n}</span>
@@ -377,7 +425,7 @@ def build():
       </div>
     </section>
 
-{app_section()}    <!-- ===== Scale ===== -->
+{app_section()}{tv_section()}    <!-- ===== Scale ===== -->
     <section class="lx-scale">
       <!-- Photo: Petar Avramoski / Unsplash (unsplash.com/license) -->
       <img class="lx-scale__bg" src="assets/images/sectors/construction.jpg" alt="" width="1600" height="900" loading="lazy">
