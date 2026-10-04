@@ -2,7 +2,7 @@
   <nav class="subnav" aria-label="{IND_NAME} page sections">
     <div class="container subnav__inner">
       <div class="subnav__title">
-        <a href="index.html#section-one" class="subnav__crumb">Industries</a>
+        <a href="./#section-one" class="subnav__crumb">Industries</a>
         <span>{IND_NAME}</span>
       </div>
       <ul class="subnav__links">
@@ -29,7 +29,7 @@
         </div>
         <div class="ind-hero__media">
           <!-- Photo: {HERO_CREDIT} / Unsplash (unsplash.com/license) -->
-          <img src="assets/images/{IMG_DIR}/hero.jpg" alt="{HERO_ALT}" width="1600" height="900"{HERO_STYLE}>
+          <img src="assets/images/{IMG_DIR}/hero.jpg" alt="{HERO_ALT}" width="1600" height="900" fetchpriority="high"{HERO_STYLE}>
         </div>
       </div>
     </section>
@@ -70,7 +70,7 @@
 
         <div class="ind-actions ind-actions--section">
           <a href="{CONTACT}" class="btn btn--primary">Contact us to get started</a>
-          <a href="index.html#section-one" class="btn btn--outline">Explore more industries</a>
+          <a href="./#section-one" class="btn btn--outline">Explore more industries</a>
         </div>
       </div>
     </section>
@@ -121,7 +121,7 @@
         </header>
         <div class="ind-actions ind-actions--section">
           <a href="{CONTACT}" class="btn btn--primary">Contact us to get started</a>
-          <a href="index.html#section-one" class="btn btn--outline">Explore more industries</a>
+          <a href="./#section-one" class="btn btn--outline">Explore more industries</a>
         </div>
       </div>
     </section>

@@ -4,6 +4,10 @@ Usage: python3 tools/smarthomes/gen_smarthomes.py   (reads/writes pages in publi
 
 import os
 import re
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "seo"))
+from seo import apply
 
 SITE = "https://mypegasus.in/"                 # main site
 SUBDOMAIN = "https://smarthomes.mypegasus.in/"  # this page is served at the subdomain root
@@ -519,7 +523,7 @@ def main():
                                 fonts + '  <link rel="stylesheet" href="css/styles.css">\n  <link rel="stylesheet" href="css/smarthomes.css">\n')
     head_nav = re.sub(r"<body[^>]*>", '<body id="top" class="theme-dark">', head_nav, count=1)
     # dark navbar: white logo
-    head_nav = re.sub(r'<a href="index.html" class="navbar__logo" aria-label="Pegasus home">\s*<img[^>]*>',
+    head_nav = re.sub(r'<a href="(?:index\.html|\./)" class="navbar__logo" aria-label="Pegasus home">\s*<img[^>]*>',
                       f'<a href="{SUBDOMAIN}" class="navbar__logo navbar__logo--smarthomes" aria-label="Pegasus SmartHomes home">\n'
                       '        <img src="assets/images/pegasus-smarthomes-logo.png" alt="Pegasus SmartHomes" width="1200" height="218">',
                       head_nav)
@@ -530,11 +534,11 @@ def main():
     page = page.replace('href="#section-', 'href="index.html#section-')
     # served from the subdomain, so links to other pages must point at the main site
     page = re.sub(r'href="index\.html', f'href="{SITE}', page)
+    page = re.sub(r'href="\./', f'href="{SITE}', page)
     page = re.sub(r'href="(construction|hospitality)\.html', rf'href="{SITE}\1', page)
-    page = page.replace("<title>Pegasus SmartHomes</title>", f'<title>Pegasus SmartHomes</title>\n  <link rel="canonical" href="{SUBDOMAIN}">', 1)
     assert 'navbar__logo--smarthomes' in page and 'logo-white.png' in page, "logo swap failed"
     assert '<body id="top" class="theme-dark">' in page, "dark theme class missing"
-    open("smarthomes.html", "w").write(page)
+    open("smarthomes.html", "w").write(apply(page, "smarthomes.html"))
     print("written smarthomes.html", len(page))
 
 main()

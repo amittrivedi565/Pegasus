@@ -4,6 +4,8 @@ import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(HERE, "..", "..", "public")  # the deployed site
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, "..", "seo"))
+from seo import apply
 from industry_helpers import CHEV, TABIDX, NL14, NL18, la, ICON, visual
 
 ICON["heart"] = '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>'
@@ -259,10 +261,10 @@ def build(cfg):
     head_nav = head_nav.replace("<title>Pegasus</title>", f"<title>{cfg['IND_NAME']} | Pegasus</title>")
     head_nav = head_nav.replace('content="Pegasus — enterprise technology that connects everything."', f'content="{cfg["meta"]}"')
     page = head_nav + main + "\n" + tail
-    page = page.replace('href="#section-', 'href="index.html#section-')
+    page = page.replace('href="#section-', 'href="./#section-')
     page = page.replace('<a href="#" class="footer__top"', '<a href="#top" class="footer__top"')
     page = page.replace("<body>", '<body id="top">', 1)
-    open(cfg["file"], "w").write(page)
+    open(cfg["file"], "w").write(apply(page, cfg["file"]))
     print("written", cfg["file"], len(page))
 
 os.chdir(PUBLIC)
